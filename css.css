@@ -760,7 +760,7 @@ em .emoji {
   border: none;
 }
 
-[data-list-item-id^="channels___"]:not([role="button"]),
+/* [data-list-item-id^="channels___"]:not([role="button"]),
 [class^="titleWrapper"] > h1,
 [class^="titleWrapper"] > h2,
 [id^=":r"] > h1,
@@ -784,7 +784,7 @@ input[name="channel-name"],
 [class^="eyebrow"],
 [class*="name"] {
   font-family: "Twemoji Mozilla", "Dashless", var(--font-primary);
-}
+} */
 
 [class^="emptyChannelIcon_"] ~ [class*="description_"] > * {
   font-family: var(--font-primary);
