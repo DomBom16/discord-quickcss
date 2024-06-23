@@ -669,85 +669,6 @@ img[role="presentation"] {
   height: 50%;
 }
 
-/* Collapsable Channel List AND Server List */
-/* :root:has(.tree__7a511) {
-  --channellist-width: 0 !important;
-  --serverlist-color: var(--primary-600)
-}
-
-:root:has(.tree__7a511:hover, .sidebar_e031be:hover) {
-  --channellist-width: 280px !important;
-  --serverlist-color: var(--primary-630)
-}
-
-.wrapper__216eb:not(:hover) {
-  width: 12px;
-  background-color: var(--serverlist-color) !important;
-}
-
-.wrapper__216eb * {
-  opacity: 0;
-}
-
-.wrapper__216eb:hover {
-  width: 72px;
-}
-
-.wrapper__216eb:hover * {
-  opacity: 1;
-} */
-
-/* Collapsable Channel List */
-/* :root:has(.tree__7a511) {
-  --channellist-width: 0 !important;
-}
-
-:root:has(.tree__7a511:hover, .sidebar_e031be:hover) {
-  --channellist-width: 280px !important;
-} */
-
-/* Collapsable Server List */
-/* .wrapper__216eb:not(:hover) {
-  width: 12px;
-  transition: width 500ms ease;
-  background-color: var(--primary-630) !important;
-}
-
-.wrapper__216eb * {
-  opacity: 0;
-}
-
-.wrapper__216eb:hover {
-  width: 72px;
-  transition: width 500ms ease;
-}
-
-.wrapper__216eb:hover * {
-  opacity: 1;
-} */
-
-:root {
-  --channellist-width: 0px;
-}
-
-:root:has([aria-label="Thread Actions"], [aria-label="Channel Actions"]) {
-  --channellist-width: 280px !important;
-}
-
-:root:has([aria-label="Private channels"]):has(
-    [aria-label="User Settings Actions"]
-  ) {
-  --channellist-width: 280px !important;
-}
-
-:root:has(div[class^="sidebar"]:hover, [aria-label="Servers sidebar"]:hover) {
-  --channellist-width: 280px !important;
-}
-
-div[class^="base"] > div[class^="content__"] > div[class^="sidebar"] {
-  transition: width 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
 :root {
   --dm-columns: 4;
 }
@@ -995,4 +916,33 @@ div[class^="topicsScroller_"] {
 
 [class*="botText"] {
   font-weight: 500;
+}
+
+[class*="userPanelInner"] [class*="nickname"] {
+  font-family: var(--font-display);
+}
+
+:root:has(
+    #thread-context,
+    #channel-context,
+    #guild-context,
+    #guild-browse-channels-context-menu,
+    #audio-device-context,
+    #user-settings-cog,
+    #account
+  ),
+:root:has([class^="privateChannels_"]):has(#user-context),
+:root:has(
+    :is([class^="sidebar_"], [class*="guilds_"]):is(:hover, :focus-within)
+  ) {
+  --visiblechannellist-width: 240px;
+}
+
+.sidebar_a4d4d9 {
+  width: var(--visiblechannellist-width, 0);
+  transition: width 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.sidebar_a4d4d9 .container_ee69e0 {
+  width: 240px;
 }
