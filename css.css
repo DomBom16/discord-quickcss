@@ -14,23 +14,6 @@
   --prompt-text: "Don't be stupid :3"; /* replace --prompt-text with your desired text if you want */
 }
 
-/*first we import the fonts*/
-@font-face {
-  font-family: "Twemoji Mozilla";
-  src: url("https://vendicated.github.io/random-files/Twemoji.Mozilla.ttf")
-    format("truetype");
-  unicode-range: U+1F1E6-1F1FF;
-  font-display: swap;
-}
-
-/* @font-face {
-  font-family: "Dashless";
-  src: url("https://vendicated.github.io/random-files/Dashless.woff2") format("woff2");
-  unicode-range: U+002D;
-  font-display: swap;
-  size-adjust: 115%; 
-} */
-
 /* Config */
 :root {
   --blur-popup: 40px;
@@ -46,7 +29,11 @@
 }
 
 /* BetterConnections */
-:root {
+/* CURRENTLY DOES NOT WORK */
+/* CURRENTLY DOES NOT WORK */
+/* CURRENTLY DOES NOT WORK */
+/* CURRENTLY DOES NOT WORK */
+/* :root {
   --spotify-color: #1ed760;
   --spotify-bg-color: #121212;
   --twitch-color: #9147ff;
@@ -244,7 +231,6 @@
   opacity: 1;
 }
 
-/* fade in and out animation */
 .connectedAccountContainer__5972d,
 .connectedAccountContainer__5972d .connectedAccountNameText__7abc2 {
   transition: all 500ms ease-in-out;
@@ -272,7 +258,7 @@
 
 .connectedAccountContainer__5972d .connectedAccountNameText__7abc2 {
   background-color: transparent !important;
-}
+} */
 
 /* Radial Status Config */
 :root {
