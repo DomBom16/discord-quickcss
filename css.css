@@ -9,7 +9,32 @@
 @import url(//dablulite.github.io/css-snippets/BetterTitlebar/import.css);
 @import url("https://dablulite.github.io/css-snippets/CyanUI2-Ports/Bootup/import.css");
 @import url(//dablulite.github.io/css-snippets/PrettyFolderIcons/import.css);
-@import url("https://aushevahmad.github.io/awesome-css/modules/bartender.css");
+
+/* Simple drawer for discord's toolbar, hover over the menu to open. */
+
+/* NOTE: this module does not work properly on Vesktop */
+
+/* add a menu icon to be visble at all times */
+[class="toolbar_e44302"]::before {
+  content: "∙∙∙"; /* Change this to anything you like [Default: ∙∙∙] */
+  font-size: 110%;
+  margin: 0 16px;
+  color: var(--text-muted);
+  font-family: 'gg sans';
+}
+
+/* decrease width to hide everything but menu icon */
+[class="toolbar_e44302"] {
+  width: var(--bartender-width); /* Adjust this based on design requirements */
+  /* If you pick a new icon, instead of "∙∙∙", you may need to adjust this value */
+}
+
+[class="toolbar_e44302"]:hover, /* expand toobar on hover */
+[class="toolbar_e44302"]:has(.open_a46bef, .selected_e44302:not([aria-label="Hide Member List"])) /* keep the toolbar open if an item (e.g., search) is active */
+{
+  width: unset; /* Adjust the width to show the whole section if necessary [default: 21%] */
+  /* If you pick a new marker, instead of "∙∙∙", you may need to adjust this value as well */
+}
 
 :root {
   --bartender-width: 4ch;
