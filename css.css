@@ -5,6 +5,11 @@
 @import url("https://dablulite.github.io/css-snippets/CyanUI2-Ports/Bootup/import.css");
 @import url("https://dablulite.github.io/css-snippets/PrettyFolderIcons/import.css");
 @import url("https://aushevahmad.github.io/awesome-css/modules/custom-bar-prompt.css");
+@import url("https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/master/Themes/EmojiReplace/EmojiReplace.theme.css");
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css");
+@import url("https://raw.githubusercontent.com/orblazer/discord-nordic/master/nordic.vencord.css");
+@import url("https://raw.githubusercontent.com/maenDisease/BetterDiscordStuff/main/Themes/Float/zFloat.theme.css");
+
 :root {
   --prompt-text: "Don't be stupid :3"; /* replace --prompt-text with your desired text if you want */
 }
