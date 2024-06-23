@@ -12,14 +12,15 @@
 @import url("https://aushevahmad.github.io/awesome-css/modules/bartender.css");
 
 :root {
-    --bartender-width: 4ch;
-    /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */
+  --bartender-width: 4ch;
+  /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */
 }
 
 /*first we import the fonts*/
 @font-face {
   font-family: "Twemoji Mozilla";
-  src: url("https://vendicated.github.io/random-files/Twemoji.Mozilla.ttf") format("truetype");
+  src: url("https://vendicated.github.io/random-files/Twemoji.Mozilla.ttf")
+    format("truetype");
   unicode-range: U+1F1E6-1F1FF;
   font-display: swap;
 }
@@ -88,120 +89,142 @@
   --domain-color-dark: white;
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="Spotify"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="Spotify"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="Spotify"]) {
   color: var(--spotify-color) !important;
   background-color: var(--spotify-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="Twitch"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="Twitch"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="Twitch"]) {
   color: var(--twitch-color) !important;
   background-color: var(--twitch-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="YouTube"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="YouTube"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="YouTube"]) {
   color: var(--youtube-color) !important;
   background-color: var(--youtube-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="Reddit"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="Reddit"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="Reddit"]) {
   color: var(--reddit-color) !important;
   background-color: var(--reddit-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="PayPal"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="PayPal"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="PayPal"]) {
   color: var(--paypal-color) !important;
   background-color: var(--paypal-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="TikTok"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="TikTok"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="TikTok"]) {
   color: var(--tiktok-color) !important;
   background-color: var(--tiktok-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="Steam"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="Steam"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="Steam"]) {
   color: var(--steam-color) !important;
   background-color: var(--steam-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="Crunchyroll"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="Crunchyroll"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="Crunchyroll"]) {
   color: var(--crunchyroll-color) !important;
   background-color: var(--crunchyroll-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="eBay"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="eBay"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="eBay"]) {
   color: var(--ebay-color) !important;
   background-color: var(--ebay-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="Xbox"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="Xbox"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="Xbox"]) {
   color: var(--xbox-color) !important;
   background-color: var(--xbox-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="Battle.net"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="Battle.net"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="Battle.net"]) {
   color: var(--battlenet-color) !important;
   background-color: var(--battlenet-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="PlayStation Network"]) .connectedAccountNameText__7abc2,
-.connectedAccountContainer__5972d:hover:has([aria-label="PlayStation Network"]) {
+.connectedAccountContainer__5972d:hover:has([aria-label="PlayStation Network"])
+  .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has(
+    [aria-label="PlayStation Network"]
+  ) {
   color: var(--playstation-color) !important;
   background-color: var(--playstation-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="Epic Games"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="Epic Games"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="Epic Games"]) {
   color: var(--epicgames-color) !important;
   background-color: var(--epicgames-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="GitHub"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="GitHub"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="GitHub"]) {
   color: var(--github-color) !important;
   background-color: var(--github-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="X"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="X"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="X"]) {
   color: var(--x-color) !important;
   background-color: var(--x-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="League of Legends"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="League of Legends"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="League of Legends"]) {
   color: var(--lol-color) !important;
   background-color: var(--lol-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="Instagram"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="Instagram"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="Instagram"]) {
   color: var(--instagram-color) !important;
   background-color: var(--instagram-bg-color);
 }
 
-.connectedAccountContainer__5972d:hover:has([aria-label="Riot Games"]) .connectedAccountNameText__7abc2,
+.connectedAccountContainer__5972d:hover:has([aria-label="Riot Games"])
+  .connectedAccountNameText__7abc2,
 .connectedAccountContainer__5972d:hover:has([aria-label="Riot Games"]) {
   color: var(--riot-games-color) !important;
   background-color: var(--riot-games-bg-color);
 }
 
-.profileColors_ac6ab4:where(.theme-light) .connectedAccountContainer__5972d:hover:has([aria-label="Domain"]) {
+.profileColors_ac6ab4:where(.theme-light)
+  .connectedAccountContainer__5972d:hover:has([aria-label="Domain"]) {
   color: var(--domain-color-light) !important;
   background-color: #000;
 }
 
-.profileColors_ac6ab4:where(.theme-dark) .connectedAccountContainer__5972d:hover:has([aria-label="Domain"]) {
+.profileColors_ac6ab4:where(.theme-dark)
+  .connectedAccountContainer__5972d:hover:has([aria-label="Domain"]) {
   color: var(--domain-color-dark) !important;
   background-color: #fff;
 }
@@ -218,7 +241,8 @@
   transition: 500ms opacity ease-in-out;
 }
 
-.connectedAccountContainer__5972d:hover .anchor_c8ddc0.anchorUnderlineOnHover__03b72 {
+.connectedAccountContainer__5972d:hover
+  .anchor_c8ddc0.anchorUnderlineOnHover__03b72 {
   opacity: 1;
 }
 
@@ -273,7 +297,6 @@
   --font-code: "JetBrains Mono";
 }
 
-
 ::selection {
   background-color: var(--nord-cyan) !important;
   color: var(--text-normal) !important;
@@ -296,7 +319,7 @@
 }
 
 /* Search bar to button in top row menu */
-.search_ac353c:not(.open_d3ab4e)>.searchBar__5a20a {
+.search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a {
   width: 22px;
   background: transparent;
 }
@@ -327,7 +350,8 @@ img[role="presentation"] {
   transform: rotate(0deg) !important;
 }
 
-[class^="clickableSticker_"] [class^="assetWrapper_"]:has([class^="lottieCanvas_"]) {
+[class^="clickableSticker_"]
+  [class^="assetWrapper_"]:has([class^="lottieCanvas_"]) {
   width: 48px !important;
   height: 48px !important;
 }
@@ -426,8 +450,10 @@ img[role="presentation"] {
   height: auto;
 }
 
-#vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) #vc-spotify-progress-bar,
-#vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) .vc-spotify-button-row {
+#vc-spotify-player:has(#vc-spotify-album-expanded-wrapper)
+  #vc-spotify-progress-bar,
+#vc-spotify-player:has(#vc-spotify-album-expanded-wrapper)
+  .vc-spotify-button-row {
   scale: 1;
   opacity: 1;
 }
@@ -463,7 +489,7 @@ img[role="presentation"] {
   margin: 16px 0 0 0 !important;
 }
 
-#vc-spotify-info-wrapper>img {
+#vc-spotify-info-wrapper > img {
   height: 100%;
   opacity: 1;
   transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -559,8 +585,8 @@ img[role="presentation"] {
 }
 
 #vc-spotify-song-title::before,
-#vc-spotify-song-title+div::before,
-#vc-spotify-song-title+div+div::before {
+#vc-spotify-song-title + div::before,
+#vc-spotify-song-title + div + div::before {
   background-color: var(--interactive-active);
 }
 
@@ -581,7 +607,7 @@ img[role="presentation"] {
   background-color: var(--interactive-active);
 }
 
-#vc-spotify-progress-bar>[class^="slider"] [class^="grabber"] {
+#vc-spotify-progress-bar > [class^="slider"] [class^="grabber"] {
   background-color: var(--interactive-active);
   border-color: var(--interactive-active);
   width: 12px !important;
@@ -599,9 +625,11 @@ img[role="presentation"] {
 }
 
 .vc-spotify-button:hover {
-  background-color: color-mix(in srgb,
-      var(--interactive-active),
-      transparent 75%);
+  background-color: color-mix(
+    in srgb,
+    var(--interactive-active),
+    transparent 75%
+  );
 }
 
 .vc-spotify-button.vc-spotify-shuffle-on {
@@ -619,7 +647,7 @@ img[role="presentation"] {
   padding: 12px 8px !important;
 }
 
-#vc-spotify-player:hover+.container_debb33 {
+#vc-spotify-player:hover + .container_debb33 {
   scale: 0;
   opacity: 0;
   height: 0;
@@ -708,7 +736,9 @@ img[role="presentation"] {
   --channellist-width: 280px !important;
 }
 
-:root:has([aria-label="Private channels"]):has([aria-label="User Settings Actions"]) {
+:root:has([aria-label="Private channels"]):has(
+    [aria-label="User Settings Actions"]
+  ) {
   --channellist-width: 280px !important;
 }
 
@@ -716,7 +746,7 @@ img[role="presentation"] {
   --channellist-width: 280px !important;
 }
 
-div[class^="base"]>div[class^="content__"]>div[class^="sidebar"] {
+div[class^="base"] > div[class^="content__"] > div[class^="sidebar"] {
   transition: width 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -729,18 +759,20 @@ div[class^="base"]>div[class^="content__"]>div[class^="sidebar"] {
   height: unset !important;
   grid-template-columns: repeat(var(--dm-columns), 1fr);
 
-  &>* {
+  & > * {
     overflow: hidden;
     grid-column: 1 / calc(var(--dm-columns) + 1);
   }
 }
 
-[class^="channel_"]:has([href="/channels/@me"],
-  [href="/library"],
-  [href="/shop"],
-  [href="/store"],
-  [href="/family-center"],
-  [href="/message-requests"]) {
+[class^="channel_"]:has(
+    [href="/channels/@me"],
+    [href="/library"],
+    [href="/shop"],
+    [href="/store"],
+    [href="/family-center"],
+    [href="/message-requests"]
+  ) {
   grid-column: auto;
 
   [class*="linkButton"] {
@@ -779,60 +811,63 @@ em .emoji {
   height: calc(100vh - 180px);
 }
 
-[data-list-id="guildsnav"]>[class^="scroller_"]>[aria-label],
+[data-list-id="guildsnav"] > [class^="scroller_"] > [aria-label],
 [id^="folder-items-"] {
   display: flex;
   flex-direction: column;
 }
 
-[data-list-id="guildsnav"]>[class^="scroller_"]>[aria-label] :is([class^="listItem_"], [class^="wrapper_"]):has([class^="numberBadge_"]) {
+[data-list-id="guildsnav"]
+  > [class^="scroller_"]
+  > [aria-label]
+  :is([class^="listItem_"], [class^="wrapper_"]):has([class^="numberBadge_"]) {
   order: -1;
 }
 
-[class^=botTagCompact_] {
+[class^="botTagCompact_"] {
   display: none;
 }
 
-[class^=titleWrapper_]+[class^=divider_],
-[class^=sectionDivider_],
-[class^=container_]::after,
-[class^=guildSeparator_] {
+[class^="titleWrapper_"] + [class^="divider_"],
+[class^="sectionDivider_"],
+[class^="container_"]::after,
+[class^="guildSeparator_"] {
   display: none;
 }
 
-[class^=peopleListItem_],
-[class^=nowPlayingColumn_] [class^=scroller_],
-[class^=itemCard_] {
+[class^="peopleListItem_"],
+[class^="nowPlayingColumn_"] [class^="scroller_"],
+[class^="itemCard_"] {
   border: none;
 }
 
-[data-list-item-id^=channels___]:not([role=button]),
-[class^=titleWrapper]>h1,
-[class^=titleWrapper]>h2,
-[id^=":r"]>h1,
-[class^=resultChannel],
-[class^=channelNameContainer_],
-[class^=searchAnswer_],
-[class^=autocompleteRowContent_] [class*=autocompleteRowHeading_],
+[data-list-item-id^="channels___"]:not([role="button"]),
+[class^="titleWrapper"] > h1,
+[class^="titleWrapper"] > h2,
+[id^=":r"] > h1,
+[class^="resultChannel"],
+[class^="channelNameContainer_"],
+[class^="searchAnswer_"],
+[class^="autocompleteRowContent_"] [class*="autocompleteRowHeading_"],
 .channelWithIcon,
-[class^=emptyChannelIcon_]+h3,
-[class^=emptyChannelIcon_]~[class*=description_],
-[class^=browser_] [class*=channelText_],
-[class^=returnButton_] [class^=text-],
-[class^=placeholder][class*=slateTextArea],
-[class^=auditLog_] [class^=overflowEllipsis_] strong,
+[class^="emptyChannelIcon_"] + h3,
+[class^="emptyChannelIcon_"] ~ [class*="description_"],
+[class^="browser_"] [class*="channelText_"],
+[class^="returnButton_"] [class^="text-"],
+[class^="placeholder"][class*="slateTextArea"],
+[class^="auditLog_"] [class^="overflowEllipsis_"] strong,
 .vc-permviewer-perms-title,
-[class^=headerChannelContainer_]>div,
-[class^=uploadDropModal_] strong,
-[class^=channelNameSpan_],
-[class^=quickswitcher_] [class^=name_],
+[class^="headerChannelContainer_"] > div,
+[class^="uploadDropModal_"] strong,
+[class^="channelNameSpan_"],
+[class^="quickswitcher_"] [class^="name_"],
 input[name="channel-name"],
-[class^=eyebrow],
-[class*=name] {
+[class^="eyebrow"],
+[class*="name"] {
   font-family: "Twemoji Mozilla", "Dashless", var(--font-primary);
 }
 
-[class^="emptyChannelIcon_"]~[class*="description_"]>* {
+[class^="emptyChannelIcon_"] ~ [class*="description_"] > * {
   font-family: var(--font-primary);
 }
 
@@ -842,124 +877,124 @@ input[name="channel-name"],
   --settingsbackground: transparent;
 }
 
-#app-mount .layer_f7d46a~.layer_f7d46a {
+#app-mount .layer_f7d46a ~ .layer_f7d46a {
   border-radius: var(--radius-md) !important;
   box-shadow: var(--shadow-high) !important;
 }
 
 .vc-platform-indicator,
-[class^=nitroBadgeSvg_] {
+[class^="nitroBadgeSvg_"] {
   height: 1rem;
 }
 
-[class^=roleIcon_] {
+[class^="roleIcon_"] {
   margin-left: 1ch;
 }
 
 /*decor go away on hover*/
-[class^=avatar_]:hover+[class^=avatarDecoration_],
-[class^=avatar_]:hover [class^=avatarDecoration_] {
+[class^="avatar_"]:hover + [class^="avatarDecoration_"],
+[class^="avatar_"]:hover [class^="avatarDecoration_"] {
   opacity: 0 !important;
 }
 
-[class^=avatarDecoration_] {
-  transition: .3s opacity;
+[class^="avatarDecoration_"] {
+  transition: 0.3s opacity;
 }
 
-[class*=lineClamp2Plus_] {
+[class*="lineClamp2Plus_"] {
   overflow-y: auto !important;
 }
 
-[class^=overlayAvatar_] {
+[class^="overlayAvatar_"] {
   --xhairwidth: 2px;
   box-shadow: none;
   border-width: 2px;
 
   &::before {
     content: "";
-    background-color: oklch(0 0 0 /.001);
+    background-color: oklch(0 0 0 /0.001);
     position: absolute;
     backdrop-filter: invert(1);
     width: var(--xhairwidth);
     height: 100%;
-    left: calc(50% - (var(--xhairwidth)/2));
+    left: calc(50% - (var(--xhairwidth) / 2));
   }
 
   &::after {
     content: "";
-    background-color: oklch(0 0 0 /.001);
+    background-color: oklch(0 0 0 /0.001);
     position: absolute;
     backdrop-filter: invert(1);
     width: 100%;
     height: var(--xhairwidth);
-    top: calc(50% - (var(--xhairwidth)/2));
+    top: calc(50% - (var(--xhairwidth) / 2));
   }
 }
 
 #account-status-picker--online {
-    --brand-experiment-560: var(--green-360);
+  --brand-experiment-560: var(--green-360);
 }
 #account-status-picker--dnd {
-    --brand-experiment-560: var(--red-400);
+  --brand-experiment-560: var(--red-400);
 }
 #account-status-picker--idle {
-    --brand-experiment-560: var(--yellow-330);
+  --brand-experiment-560: var(--yellow-330);
 }
 #account-status-picker--invisible {
-    --brand-experiment-560: var(--primary-400);
+  --brand-experiment-560: var(--primary-400);
 }
 #account .submenu_aed9ee .separator__174fc {
-    display: none;
+  display: none;
 }
 #account .submenu_aed9ee .description_d1e167 {
-    height: fit-content;
-    overflow: hidden;
-    max-height: 0rem;
-    transition: .2s ease !important;
-    width: 100%;
-    flex: 0 0 100%;
-    display: flex;
+  height: fit-content;
+  overflow: hidden;
+  max-height: 0rem;
+  transition: 0.2s ease !important;
+  width: 100%;
+  flex: 0 0 100%;
+  display: flex;
 }
 #account .submenu_aed9ee .item__183e8.focused_dcafb9 .description_d1e167 {
-    max-height: 4rem;
+  max-height: 4rem;
 }
 .statusItem__24445 {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .statusItem__24445 .icon__1d1c6 {
-    margin-right: 10px;
-    flex: 0 0 10px;
+  margin-right: 10px;
+  flex: 0 0 10px;
 }
 .status__8c19b {
-    width: calc(100% - 20px);
-    display: flex;
+  width: calc(100% - 20px);
+  display: flex;
 }
 
 #account-status-picker--idle.focused_dcafb9 .statusItem__24445::after {
-    max-height: 4rem;
+  max-height: 4rem;
 }
 
-div[class^=topicsScroller_] {
-    max-height: calc(100vh - 2.5in);
+div[class^="topicsScroller_"] {
+  max-height: calc(100vh - 2.5in);
 }
-:has(> div[class^=topicsScroller_]) {
-    width: calc(100% - 8q);
+:has(> div[class^="topicsScroller_"]) {
+  width: calc(100% - 8Q);
 }
 
-[class*=channelTextAreaDisabled] {
-    display: none!important;
+[class*="channelTextAreaDisabled"] {
+  display: none !important;
 }
 
 /* or if it doesn't work like because of themes: */
-[class*=channelTextAreaDisabled] {
-    opacity: 0!important;
-    position: absolute!important;
-    height: 0px!important;
-    width: 0px!important;
-    z-index: 0!important;
+[class*="channelTextAreaDisabled"] {
+  opacity: 0 !important;
+  position: absolute !important;
+  height: 0px !important;
+  width: 0px !important;
+  z-index: 0 !important;
 }
 
-[class*=botText] {
-    font-weight: 500;
+[class*="botText"] {
+  font-weight: 500;
 }
