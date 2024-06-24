@@ -16,6 +16,9 @@
 :root {
     --bartender-width: 4ch;  /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */
 }
+[class="toolbar_e44302"]::before {
+  font-family: 'gg sans';
+}
 
 .userProfileInner__8ff35 {
     /* Plain colour banner */
