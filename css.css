@@ -12,6 +12,10 @@
 @import url("https://minidiscordthemes.github.io/MinimalAddonCards/MinimalAddonCards.theme.css");
 @import url("https://minidiscordthemes.github.io/Snippets/ProfileBannerHeight/main.css");
 @import url("https://minidiscordthemes.github.io/Snippets/MinimalSearchbar/main.css");
+@import url("https://aushevahmad.github.io/awesome-css/modules/bartender.css");
+:root {
+    --bartender-width: 4ch;  /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */
+}
 
 .userProfileInner__8ff35 {
     /* Plain colour banner */
