@@ -10,6 +10,22 @@
 @import url("https://raw.githubusercontent.com/maenDisease/BetterDiscordStuff/main/Themes/Float/zFloat.theme.css");
 @import url("https://minidiscordthemes.github.io/Snippets/ForumImprovements/main.css");
 @import url("https://minidiscordthemes.github.io/MinimalAddonCards/MinimalAddonCards.theme.css");
+@import url("https://minidiscordthemes.github.io/Snippets/ProfileBannerHeight/main.css");
+
+.userProfileInner__8ff35 {
+    /* Plain colour banner */
+    &:where(:not(:has(.banner__6d414[style*="background-image"]))) {
+        --banner-height-desired: 60px;
+    }
+    /* Image banner */
+    &:where(:has(.banner__6d414[style*="background-image"])) {
+        --banner-height-desired: 95px;
+    }
+    /* All banner types in new profile experiment */
+    &.biteSizeInnerThemed__5cdaf {
+        --banner-height-desired: 85px;
+    }
+}
 
 
 :root {
