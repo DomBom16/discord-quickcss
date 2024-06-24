@@ -8,6 +8,7 @@
 @import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css");
 @import url("https://raw.githubusercontent.com/orblazer/discord-nordic/master/nordic.vencord.css");
 @import url("https://raw.githubusercontent.com/maenDisease/BetterDiscordStuff/main/Themes/Float/zFloat.theme.css");
+@import url("https://minidiscordthemes.github.io/Snippets/ForumImprovements/main.css");
 
 :root {
   --prompt-text: "Don't be stupid :3"; /* replace --prompt-text with your desired text if you want */
