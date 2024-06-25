@@ -729,17 +729,17 @@ div[class^="topicsScroller_"] {
 [class*="biteSizeInner"] > [class*="body"]:nth-child(1),
 [class*="biteSizeInner"] > [class*="body"]:nth-child(2),
 [class*="biteSizeInner"] > [clas*="wrapper"] > div {
-  display: none;
+  display: none !important;
 }
 
 [class*="biteSizeInner"],
 [class*="biteSizeInner"] > [class*="body"] > [class*="menus"] {
-  padding: 0;
-  border: 0;
+  padding: 0 !important;
+  border: 0 !important;
 }
 
 [class*="biteSizeInner"] > [class*="body"] {
-  padding: 16px;
+  padding: 16px !important;
 }
 
 [class*="biteSizeOuter"] {
