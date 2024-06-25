@@ -13,37 +13,40 @@
 @import url("https://minidiscordthemes.github.io/Snippets/ProfileBannerHeight/main.css");
 @import url("https://minidiscordthemes.github.io/Snippets/MinimalSearchbar/main.css");
 @import url("https://aushevahmad.github.io/awesome-css/modules/bartender.css");
-@import url('https://rinyafii.github.io/theme-stuff/discord/snippets/profile-v2-but-better.css');
+@import url("https://rinyafii.github.io/theme-stuff/discord/snippets/profile-v2-but-better.css");
 
 /*moves vc hang status to the left*/
-[class*=iconGroup]:has([class*=hangStatusIcon], [d*='M13 3a1'], [class*=gameIcon]) {
+[class*="iconGroup"]:has(
+    [class*="hangStatusIcon"],
+    [d*="M13 3a1"],
+    [class*="gameIcon"]
+  ) {
   display: flex;
   position: absolute;
   right: 101%;
 }
 
 :root {
-    --bartender-width: 4ch;  /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */
+  --bartender-width: 4ch; /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */
 }
 [class="toolbar_e44302"]::before {
-  font-family: 'gg sans';
+  font-family: "gg sans";
 }
 
 .userProfileInner__8ff35 {
-    /* Plain colour banner */
-    &:where(:not(:has(.banner__6d414[style*="background-image"]))) {
-        --banner-height-desired: 60px;
-    }
-    /* Image banner */
-    &:where(:has(.banner__6d414[style*="background-image"])) {
-        --banner-height-desired: 95px;
-    }
-    /* All banner types in new profile experiment */
-    &.biteSizeInnerThemed__5cdaf {
-        --banner-height-desired: 70px;
-    }
+  /* Plain colour banner */
+  &:where(:not(:has(.banner__6d414[style*="background-image"]))) {
+    --banner-height-desired: 60px;
+  }
+  /* Image banner */
+  &:where(:has(.banner__6d414[style*="background-image"])) {
+    --banner-height-desired: 95px;
+  }
+  /* All banner types in new profile experiment */
+  &.biteSizeInnerThemed__5cdaf {
+    --banner-height-desired: 70px;
+  }
 }
-
 
 :root {
   --prompt-text: "Don't be stupid :3"; /* replace --prompt-text with your desired text if you want */
@@ -720,4 +723,26 @@ div[class^="topicsScroller_"] {
 
 .sidebar_a4d4d9 .container_ee69e0 {
   width: 280px;
+}
+
+[class*="biteSizeInner"] > [class*="header"],
+[class*="biteSizeInner"] > [class*="body"]:nth-child(1),
+[class*="biteSizeInner"] > [class*="body"]:nth-child(2),
+[class*="biteSizeInner"] > [clas*="wrapper"] > div {
+  display: none;
+}
+
+[class*="biteSizeInner"],
+[class*="biteSizeInner"] > [class*="body"] > [class*="menus"] {
+  padding: 0;
+  border: 0;
+}
+
+[class*="biteSizeInner"] > [class*="body"] {
+  padding: 16px;
+}
+
+[class*="biteSizeOuter"] {
+  background-image: none;
+  background-color: var(--background-secondary-alt) !important;
 }
