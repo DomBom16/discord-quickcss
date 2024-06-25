@@ -15,6 +15,13 @@
 @import url("https://aushevahmad.github.io/awesome-css/modules/bartender.css");
 @import url('https://rinyafii.github.io/theme-stuff/discord/snippets/profile-v2-but-better.css');
 
+/*moves vc hang status to the left*/
+[class*=iconGroup]:has([class*=hangStatusIcon], [d*='M13 3a1'], [class*=gameIcon]) {
+  display: flex;
+  position: absolute;
+  right: 101%;
+}
+
 :root {
     --bartender-width: 4ch;  /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */
 }
@@ -658,10 +665,10 @@ input[name="channel-name"],
   display: flex;
 }
 
-#account-status-picker--idle.focused_dcafb9 .statusItem__24445::after {
+/* #account-status-picker--idle.focused_dcafb9 .statusItem__24445::after {
   max-height: 4rem;
 }
-
+ */
 div[class^="topicsScroller_"] {
   max-height: calc(100vh - 2.5in);
 }
