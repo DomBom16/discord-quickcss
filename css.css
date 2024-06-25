@@ -725,24 +725,24 @@ div[class^="topicsScroller_"] {
   width: 280px;
 }
 
-[class*="biteSizeInner"] > [class*="header"],
-[class*="biteSizeInner"] > [class*="body"] > div:not([class*="menus"]),
-[class*="biteSizeInner"] > [clas*="wrapper"] > div,
-[class*="biteSizeInner"] > [class*="wrapper"] {
+[class*="accountProfilePopoutWrapper"] [class*="biteSizeInner"] > [class*="header"],
+[class*="accountProfilePopoutWrapper"] [class*="biteSizeInner"] > [class*="body"] > div:not([class*="menus"]),
+[class*="accountProfilePopoutWrapper"] [class*="biteSizeInner"] > [clas*="wrapper"] > div,
+[class*="accountProfilePopoutWrapper"] [class*="biteSizeInner"] > [class*="wrapper"] {
   display: none !important;
 }
 
-[class*="biteSizeInner"],
-[class*="biteSizeInner"] > [class*="body"] > [class*="menus"] {
+[class*="accountProfilePopoutWrapper"] [class*="biteSizeInner"],
+[class*="accountProfilePopoutWrapper"] [class*="biteSizeInner"] > [class*="body"] > [class*="menus"] {
   padding: 0 !important;
   border: 0 !important;
 }
 
-[class*="biteSizeInner"] > [class*="body"] {
+[class*="accountProfilePopoutWrapper"] [class*="biteSizeInner"] > [class*="body"] {
   padding: 16px !important;
 }
 
-[class*="biteSizeOuter"] {
+[class*="accountProfilePopoutWrapper"] [class*="biteSizeOuter"] {
   background-image: none;
   background-color: var(--background-secondary-alt) !important;
 }
