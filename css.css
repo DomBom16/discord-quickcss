@@ -811,16 +811,6 @@ div[class^="topicsScroller_"] {
   border-radius: var(--radius-sm);
 }
 [class*='descriptionClamp_'] { -webkit-line-clamp: 10 } /* make bio cut off a more sane number */
-/*[class*='viewFullBio__'] {display: none;}  */
-[class*="userPopoutInner_"] [class*="banner"] { border-radius: var(--radius-sm) var(--radius-sm) 0 0; } /* fix banner corners (on some themes) */
-[class*="userPopoutInner_"] [class*="activity_"] { border: none; } /* remove default borders on the activity card */
-
-/*pfp position on themed mini profiles*/
-[class*="userProfileOuterThemed_"] [class*="userPopoutInner_"] [class*="clickable_"] {
-  top: 58px;
-  left: 18px;
-  transform: scale(1.04);
-}
 
 /* fix user status icon bg color */
 [class*="userProfileOuterThemed_"] [class*="clickable_"] svg > :not([fill*='#']):not(foreignObject) { opacity: 0 !important; }
