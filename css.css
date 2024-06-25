@@ -625,7 +625,7 @@ input[name="channel-name"],
   }
 }
 
-#account-status-picker--online {
+/* #account-status-picker--online {
   --brand-experiment-560: var(--green-360);
 }
 #account-status-picker--dnd {
@@ -665,7 +665,7 @@ input[name="channel-name"],
   display: flex;
 }
 
-/* #account-status-picker--idle.focused_dcafb9 .statusItem__24445::after {
+#account-status-picker--idle.focused_dcafb9 .statusItem__24445::after {
   max-height: 4rem;
 }
  */
