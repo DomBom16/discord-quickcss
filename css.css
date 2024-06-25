@@ -726,8 +726,7 @@ div[class^="topicsScroller_"] {
 }
 
 [class*="biteSizeInner"] > [class*="header"],
-[class*="biteSizeInner"] > [class*="body"]:nth-child(1),
-[class*="biteSizeInner"] > [class*="body"]:nth-child(2),
+[class*="biteSizeInner"] > [class*="body"] > div:not([class*="menus"]),
 [class*="biteSizeInner"] > [clas*="wrapper"] > div {
   display: none !important;
 }
