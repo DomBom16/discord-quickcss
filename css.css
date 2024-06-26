@@ -15,31 +15,22 @@
 @import url("https://aushevahmad.github.io/awesome-css/modules/adblock.css");
 
 :root {
-  --image-link: url("https://cdn.discordapp.com/emojis/1196313509525471355.webp");
+  --image-link: url("https://cdn.discordapp.com/emojis/1026533070955872337.webp?size=96&quality=lossless");
 }
 
 /* Replaces the default emoji picker with any emoji of your choice! */
 
 [aria-label="Select emoji"]::before {
   content: "";
-  background-image: var(
-    --image-link
-  ); /* replace var() with url("link-to-image") */
-
-  /* for example:
-    
-    background-image: url("https://cdn.discordapp.com/emojis/1226352687914942484.webp");
-    
-    */
-
+  background-image: var(--image-link);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20%;
+  border-radius: 0;
   position: absolute;
   /* Adjust the width or height for the emoji */
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   /* end */
   display: block;
   visibility: visible;
