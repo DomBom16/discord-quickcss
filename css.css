@@ -13,6 +13,7 @@
 /* @import url("https://minidiscordthemes.github.io/Snippets/ProfileBannerHeight/main.css"); */
 @import url("https://aushevahmad.github.io/awesome-css/modules/bartender.css");
 @import url("https://github.com/rinyafii/theme-stuff/raw/main/discord/snippets/search-icon-until-focus.css");
+@import url("https://aushevahmad.github.io/awesome-css/modules/adblock.css");
 
 /*moves vc hang status to the left*/
 [class*="iconGroup"]:has(
@@ -446,7 +447,7 @@ img[role="presentation"] {
   height: 50%;
 }
 
-:root {
+/* :root {
   --dm-columns: 4;
 }
 
@@ -492,7 +493,7 @@ img[role="presentation"] {
   [class*="content_"] {
     display: none;
   }
-}
+} */
 
 em .emoji {
   transform: skew(-14deg);
