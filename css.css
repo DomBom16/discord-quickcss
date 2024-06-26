@@ -10,10 +10,50 @@
 @import url("https://raw.githubusercontent.com/maenDisease/BetterDiscordStuff/main/Themes/Float/zFloat.theme.css");
 @import url("https://minidiscordthemes.github.io/Snippets/ForumImprovements/main.css");
 @import url("https://minidiscordthemes.github.io/MinimalAddonCards/MinimalAddonCards.theme.css");
-/* @import url("https://minidiscordthemes.github.io/Snippets/ProfileBannerHeight/main.css"); */
 @import url("https://aushevahmad.github.io/awesome-css/modules/bartender.css");
 @import url("https://github.com/rinyafii/theme-stuff/raw/main/discord/snippets/search-icon-until-focus.css");
 @import url("https://aushevahmad.github.io/awesome-css/modules/adblock.css");
+
+:root {
+  --image-link: url("https://cdn.discordapp.com/emojis/1196313509525471355.webp");
+}
+
+/* Replaces the default emoji picker with any emoji of your choice! */
+
+[aria-label="Select emoji"]::before {
+  content: "";
+  background-image: var(
+    --image-link
+  ); /* replace var() with url("link-to-image") */
+
+  /* for example:
+    
+    background-image: url("https://cdn.discordapp.com/emojis/1226352687914942484.webp");
+    
+    */
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20%;
+  position: absolute;
+  /* Adjust the width or height for the emoji */
+  width: 24px;
+  height: 24px;
+  /* end */
+  display: block;
+  visibility: visible;
+  filter: grayscale(100%);
+}
+
+[aria-label="Select emoji"]:hover::before {
+  filter: grayscale(0);
+}
+
+/* hide original emoji */
+[aria-label="Select emoji"] {
+  visibility: hidden;
+}
 
 /*moves vc hang status to the left*/
 [class*="iconGroup"]:has(
@@ -31,21 +71,6 @@
 }
 [class="toolbar_e44302"]::before {
   font-family: "gg sans";
-}
-
-.userProfileInner__8ff35 {
-  /* Plain colour banner */
-  &:where(:not(:has(.banner__6d414[style*="background-image"]))) {
-    --banner-height-desired: 60px;
-  }
-  /* Image banner */
-  &:where(:has(.banner__6d414[style*="background-image"])) {
-    --banner-height-desired: 95px;
-  }
-  /* All banner types in new profile experiment */
-  &.biteSizeInnerThemed__5cdaf {
-    --banner-height-desired: 70px;
-  }
 }
 
 :root {
