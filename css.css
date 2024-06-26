@@ -822,3 +822,12 @@ div[class^="topicsScroller_"] {
   background-image: none;
   background-color: var(--background-secondary-alt) !important;
 }
+
+[class*="userPopoutInner"],
+[class*="userPopoutOuter"] {
+  border-radius: var(--radius-lg);
+}
+
+[class*="biteSizeInnerThemed_"] {
+  padding-bottom: 0;
+}
