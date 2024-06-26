@@ -1,25 +1,39 @@
-@import url("https://minidiscordthemes.github.io/Snippets/ChannelListWidth/main.css");
-@import url("https://dablulite.github.io/css-snippets/BetterAuthApps/import.css");
-@import url("https://dablulite.github.io/css-snippets/BetterTitlebar/import.css");
-@import url("https://dablulite.github.io/css-snippets/CyanUI2-Ports/Bootup/import.css");
-@import url("https://dablulite.github.io/css-snippets/PrettyFolderIcons/import.css");
-@import url("https://aushevahmad.github.io/awesome-css/modules/custom-bar-prompt.css");
-@import url("https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/master/Themes/EmojiReplace/EmojiReplace.theme.css");
-@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css");
-@import url("https://raw.githubusercontent.com/orblazer/discord-nordic/master/nordic.vencord.css");
-@import url("https://raw.githubusercontent.com/maenDisease/BetterDiscordStuff/main/Themes/Float/zFloat.theme.css");
-@import url("https://minidiscordthemes.github.io/Snippets/ForumImprovements/main.css");
-@import url("https://minidiscordthemes.github.io/MinimalAddonCards/MinimalAddonCards.theme.css");
-@import url("https://aushevahmad.github.io/awesome-css/modules/bartender.css");
-@import url("https://github.com/rinyafii/theme-stuff/raw/main/discord/snippets/search-icon-until-focus.css");
-@import url("https://aushevahmad.github.io/awesome-css/modules/adblock.css");
-
+@import url(https://minidiscordthemes.github.io/Snippets/ChannelListWidth/main.css);
+@import url(https://dablulite.github.io/css-snippets/BetterAuthApps/import.css);
+@import url(https://dablulite.github.io/css-snippets/BetterTitlebar/import.css);
+@import url(https://dablulite.github.io/css-snippets/CyanUI2-Ports/Bootup/import.css);
+@import url(https://dablulite.github.io/css-snippets/PrettyFolderIcons/import.css);
+@import url(https://aushevahmad.github.io/awesome-css/modules/custom-bar-prompt.css);
+@import url(https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/master/Themes/EmojiReplace/EmojiReplace.theme.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css);
+@import url(https://raw.githubusercontent.com/orblazer/discord-nordic/master/nordic.vencord.css);
+@import url(https://raw.githubusercontent.com/maenDisease/BetterDiscordStuff/main/Themes/Float/zFloat.theme.css);
+@import url(https://minidiscordthemes.github.io/Snippets/ForumImprovements/main.css);
+@import url(https://minidiscordthemes.github.io/MinimalAddonCards/MinimalAddonCards.theme.css);
+@import url(https://aushevahmad.github.io/awesome-css/modules/bartender.css);
+@import url(https://github.com/rinyafii/theme-stuff/raw/main/discord/snippets/search-icon-until-focus.css);
+@import url(https://aushevahmad.github.io/awesome-css/modules/adblock.css);
 :root {
   --image-link: url("https://cdn.discordapp.com/emojis/1026533070955872337.webp?size=96&quality=lossless");
+  --bartender-width: 4ch;
+  --prompt-text: "Don't be stupid :3";
+  --user-status-online: #a3be8c;
+  --user-status-idle: #ebcb8b;
+  --user-status-dnd: #bf616a;
+  --user-status-invisible: #7a859d;
+  --font-primary: "Mona Sans";
+  --font-display: "Bricolage Grotesque";
+  --font-headline: "Bricolage Grotesque";
+  --font-code: "JetBrains Mono";
+  --channellist-width: 280px;
+  --channellist-header-height: 48px;
+  --serverlist-width: 72px;
+  --channels-filter: blur(0) brightness(100%);
+  --header-opacity: 1;
+  --settingswidth: 1100;
+  --settingsheight: 80;
+  --settingsbackground: transparent;
 }
-
-/* Replaces the default emoji picker with any emoji of your choice! */
-
 [aria-label="Select emoji"]::before {
   content: "";
   background-image: var(--image-link);
@@ -34,17 +48,12 @@
   visibility: visible;
   filter: grayscale(100%);
 }
-
 [aria-label="Select emoji"]:hover::before {
   filter: grayscale(0);
 }
-
-/* hide original emoji */
 [aria-label="Select emoji"] {
   visibility: hidden;
 }
-
-/*moves vc hang status to the left*/
 [class*="iconGroup"]:has(
     [class*="hangStatusIcon"],
     [d*="M13 3a1"],
@@ -54,167 +63,102 @@
   position: absolute;
   right: 101%;
 }
-
-:root {
-  --bartender-width: 4ch; /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */
-}
 [class="toolbar_e44302"]::before {
   font-family: "gg sans";
 }
-
-:root {
-  --prompt-text: "Don't be stupid :3"; /* replace --prompt-text with your desired text if you want */
-}
-
-/* Radial Status Config */
-:root {
-  --user-status-online: #a3be8c;
-  /* Colour for online status */
-  --user-status-idle: #ebcb8b;
-  /* Colour for idle status */
-  --user-status-dnd: #bf616a;
-  /* Colour for dnd status */
-  --user-status-invisible: #7a859d;
-}
-
-:root {
-  --font-primary: "Mona Sans";
-  /* main font */
-  --font-display: "Bricolage Grotesque";
-  /* channellist categories and some other places */
-  --font-headline: "Bricolage Grotesque";
-  /* headlines, big texts like like in the nitro settings */
-  --font-code: "JetBrains Mono";
-}
-
 ::selection {
   background-color: var(--nord-cyan) !important;
   color: var(--text-normal) !important;
 }
-
 .vc-platform-indicator svg {
   fill: #8fbcbb !important;
 }
-
 @keyframes warningVisibility {
   to {
     visibility: hidden !important;
   }
 }
-
-/* Improved customisable channel list width and header height */
-:root {
-  --channellist-width: 280px;
-  --channellist-header-height: 48px;
-}
-
-/* Search bar to button in top row menu */
 .search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a {
   width: 22px;
-  background: transparent;
+  background: 0 0;
 }
-
 .searchBarComponent__8f95f {
-  background: transparent;
+  background: 0 0;
 }
-
 .search_ac353c:not(.open_d3ab4e) .iconLayout__9d9a4 {
   cursor: pointer;
 }
-
 .search_ac353c:not(.open_d3ab4e) .iconContainer__9f124 {
   transform: scale(1.4);
 }
-
-.search_ac353c:not(.open_d3ab4e) .icon__5c8c7 {
+.search_ac353c:not(.open_d3ab4e) .icon__5c8c7,
+.vc-spotify-album,
+.vc-spotify-artist {
   color: var(--interactive-normal);
 }
-
-.search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7 {
+#vc-spotify-player .colorStandard__3d599,
+.search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7,
+.vc-spotify-button {
   color: var(--interactive-active);
 }
-
-/* Replace the settings donation banner image */
 img[role="presentation"] {
   content: url("https://cdn.discordapp.com/emojis/1161713157794963536.webp?size=128&quality=lossless") !important;
-  transform: rotate(0deg) !important;
+  transform: rotate(0) !important;
 }
-
 [class^="clickableSticker_"]
   [class^="assetWrapper_"]:has([class^="lottieCanvas_"]) {
   width: 48px !important;
   height: 48px !important;
 }
-
-/* BetterSpotifyPlayer */
 .platform-win .sidebar_e031be {
   border-radius: 0;
 }
-
 #vc-spotify-player {
   height: 50px;
-  background: transparent !important;
+  background: 0 0 !important;
   position: relative;
-  transition: height 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   padding: 7px !important;
   border-bottom: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  /* overflow: hidden; */
 }
-
 .panels__58331 {
   display: flex;
   flex-direction: column !important;
   align-items: stretch;
   justify-content: flex-end;
 }
-
 #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) {
   height: 310px;
 }
-
 #vc-spotify-info-wrapper {
   width: 100%;
 }
-
 #vc-spotify-player:hover {
   height: calc(100vh);
   padding: 16px !important;
 }
-
 .sidebar_e031be {
-  transition: width 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 :root:has(#vc-spotify-player:hover) {
   --channellist-width: 352px !important;
-  /* --serverlist-width: 0 !important; */
   --channels-filter: blur(2px) brightness(80%);
 }
-
-:root {
-  --serverlist-width: 72px;
-  --channels-filter: blur(0) brightness(100%);
-  --header-opacity: 1;
-}
-
 .scroller__1f498 {
-  transition: filter 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   filter: var(--channels-filter);
 }
-
 .header__77c95 {
   opacity: var(--header-opacity);
 }
-
 .wrapper__216eb {
-  transition: width 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   width: var(--serverlist-width);
 }
-
 #vc-spotify-progress-bar,
 .vc-spotify-button-row {
   opacity: 0;
@@ -223,23 +167,17 @@ img[role="presentation"] {
   height: 0;
   margin: 0;
   padding: 0;
-  transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 #vc-spotify-player:hover #vc-spotify-progress-bar,
 #vc-spotify-player:hover .vc-spotify-button-row {
   scale: 1;
   opacity: 1;
   display: flex !important;
-}
-
-#vc-spotify-player:hover #vc-spotify-progress-bar,
-#vc-spotify-player:hover .vc-spotify-button-row {
   margin: 16px 4px;
   width: 100%;
   height: auto;
 }
-
 #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper)
   #vc-spotify-progress-bar,
 #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper)
@@ -247,7 +185,6 @@ img[role="presentation"] {
   scale: 1;
   opacity: 1;
 }
-
 #vc-spotify-player::before {
   z-index: -1;
   content: "";
@@ -258,7 +195,7 @@ img[role="presentation"] {
   left: 0;
   right: 0;
   bottom: 0;
-  transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   background: var(--vc-spotify-track-image);
   background-size: cover;
   background-position: center;
@@ -266,40 +203,34 @@ img[role="presentation"] {
   scale: 1;
   filter: brightness(30%) blur(25px);
 }
-
-#vc-spotify-player:hover::before,
-#vc-spotify-player:has(#vc-spotify-album-expanded-wrapper)::before {
+#vc-spotify-player:has(#vc-spotify-album-expanded-wrapper)::before,
+#vc-spotify-player:hover::before {
   opacity: 1;
   scale: 1.1;
   height: 100%;
   filter: brightness(40%) blur(16px);
 }
-
 #vc-spotify-progress-bar {
-  margin: 16px 0 0 0 !important;
+  margin: 16px 0 0 !important;
 }
-
 #vc-spotify-info-wrapper > img {
   height: 100%;
   opacity: 1;
-  transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 #vc-spotify-player:hover #vc-spotify-album-image {
   opacity: 1;
   scale: 1.5;
   transform: translateX(7px) translateY(calc(-100% - 8px));
-  animation: blurfade 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) blurfade;
 }
-
 #vc-spotify-player #vc-spotify-album-image {
-  animation: blurfade-r 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) blurfade-r;
   opacity: 1;
   filter: blur(0);
   transform: none;
   scale: 1;
 }
-
 @keyframes blurfade {
   0% {
     opacity: 1;
@@ -307,14 +238,12 @@ img[role="presentation"] {
     transform: none;
     scale: 1;
   }
-
   20% {
     opacity: 0;
     filter: blur(20px);
     transform: none;
     scale: 0;
   }
-
   20.00001% {
     opacity: 0;
     filter: blur(20px);
@@ -322,7 +251,6 @@ img[role="presentation"] {
     scale: 0;
   }
 }
-
 @keyframes blurfade-r {
   0% {
     opacity: 1;
@@ -330,14 +258,12 @@ img[role="presentation"] {
     filter: blur(0);
     transform: translateX(7px) translateY(calc(-100% - 8px));
   }
-
   20% {
     opacity: 0;
     filter: blur(20px);
     transform: translateX(7px) translateY(calc(-100% - 8px));
     scale: 1;
   }
-
   20.00001% {
     opacity: 1;
     filter: blur(20px);
@@ -345,58 +271,37 @@ img[role="presentation"] {
     scale: 0;
   }
 }
-
 #vc-spotify-album-image:hover {
   filter: none;
 }
-
 #vc-spotify-info-wrapper #vc-spotify-titles {
   margin-left: 0;
-  transition: margin-left 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: margin-left 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 #vc-spotify-player:hover #vc-spotify-titles {
   margin-left: -57px;
   padding: 0;
 }
-
 #vc-spotify-player:hover #vc-spotify-song-title {
   font-size: 22px !important;
   padding: 4px 0;
 }
-
 #vc-spotify-player:hover #vc-spotify-titles .size14_b2af01 {
   font-size: 15px;
 }
-
 #vc-spotify-player #vc-spotify-titles .size14_b2af01 {
   font-size: 13px;
-  transition: font-size 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: font-size 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
-#vc-spotify-song-title::before,
+#vc-spotify-player .barFill__1f56b,
+#vc-spotify-song-title + div + div::before,
 #vc-spotify-song-title + div::before,
-#vc-spotify-song-title + div + div::before {
+#vc-spotify-song-title::before {
   background-color: var(--interactive-active);
 }
-
-#vc-spotify-player .colorStandard__3d599 {
-  color: var(--interactive-active);
-}
-
-.vc-spotify-artist,
-.vc-spotify-album {
-  color: var(--interactive-normal);
-}
-
 #vc-spotify-player .bar_e58961 {
   background-color: color-mix(in srgb, var(--white-500), transparent 75%);
 }
-
-#vc-spotify-player .barFill__1f56b {
-  background-color: var(--interactive-active);
-}
-
 #vc-spotify-progress-bar > [class^="slider"] [class^="grabber"] {
   background-color: var(--interactive-active);
   border-color: var(--interactive-active);
@@ -405,15 +310,9 @@ img[role="presentation"] {
   margin-top: 3px;
   opacity: 1 !important;
 }
-
 .vc-spotify-progress-time {
   top: 12px;
 }
-
-.vc-spotify-button {
-  color: var(--interactive-active);
-}
-
 .vc-spotify-button:hover {
   background-color: color-mix(
     in srgb,
@@ -421,22 +320,18 @@ img[role="presentation"] {
     transparent 75%
   );
 }
-
 .vc-spotify-button.vc-spotify-shuffle-on {
   color: var(--green-360);
 }
-
 .vc-spotify-button.vc-spotify-shuffle-on:hover {
   background-color: color-mix(in srgb, var(--green-360), transparent 75%);
 }
-
 .container_debb33 {
   background-color: #0000 !important;
-  transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
   height: 65px;
   padding: 12px 8px !important;
 }
-
 #vc-spotify-player:hover + .container_debb33 {
   scale: 0;
   opacity: 0;
@@ -445,275 +340,106 @@ img[role="presentation"] {
   padding: 0 !important;
   margin: 0;
 }
-
 .panels__58331 {
   height: 65px;
-  transition: height 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 .panels__58331:has(#vc-spotify-player) {
   height: 130px;
-  transition: height 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 .panels__58331:has(#vc-spotify-player:hover) {
-  transition: height 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   height: 50%;
 }
-
-/* :root {
-  --dm-columns: 4;
-}
-
-[class^="privateChannels_"] [class^="content_"] {
-  display: grid;
-  height: unset !important;
-  grid-template-columns: repeat(var(--dm-columns), 1fr);
-
-  & > * {
-    overflow: hidden;
-    grid-column: 1 / calc(var(--dm-columns) + 1);
-  }
-}
-
-[class^="channel_"]:has(
-    [href="/channels/@me"],
-    [href="/library"],
-    [href="/shop"],
-    [href="/store"],
-    [href="/family-center"],
-    [href="/message-requests"]
-  ) {
-  grid-column: auto;
-
-  [class*="linkButton"] {
-    padding-right: 0;
-  }
-
-  [class*="link_"] {
-    justify-content: center;
-    gap: 0;
-  }
-
-  [class*="avatar_"] {
-    margin: 0;
-    width: unset;
-  }
-
-  [class*="avatarWithText_"] {
-    flex-grow: unset;
-  }
-
-  [class*="content_"] {
-    display: none;
-  }
-} */
-
 em .emoji {
   transform: skew(-14deg);
 }
-
-[aria-label="Mute"] [aria-hidden="true"],
-[aria-label="Deafen"] [aria-hidden="true"] {
+[aria-label="Deafen"] [aria-hidden="true"],
+[aria-label="Mute"] [aria-hidden="true"] {
   opacity: 0.4;
 }
-
 [class^="positionContainer_"] {
   height: calc(100vh - 180px);
 }
-
 [data-list-id="guildsnav"] > [class^="scroller_"] > [aria-label],
 [id^="folder-items-"] {
   display: flex;
   flex-direction: column;
 }
-
 [data-list-id="guildsnav"]
   > [class^="scroller_"]
   > [aria-label]
   :is([class^="listItem_"], [class^="wrapper_"]):has([class^="numberBadge_"]) {
   order: -1;
 }
-
-[class^="botTagCompact_"] {
-  display: none;
-}
-
-[class^="titleWrapper_"] + [class^="divider_"],
-[class^="sectionDivider_"],
+[class*="userProfileModalInner_"]:before,
+[class*="userProfileOuterThemed_"] [class*="userPopoutInner_"]:before,
+[class^="botTagCompact_"],
 [class^="container_"]::after,
-[class^="guildSeparator_"] {
+[class^="guildSeparator_"],
+[class^="sectionDivider_"],
+[class^="titleWrapper_"] + [class^="divider_"] {
   display: none;
 }
-
-[class^="peopleListItem_"],
+[class^="itemCard_"],
 [class^="nowPlayingColumn_"] [class^="scroller_"],
-[class^="itemCard_"] {
+[class^="peopleListItem_"] {
   border: none;
 }
-
-/* [data-list-item-id^="channels___"]:not([role="button"]),
-[class^="titleWrapper"] > h1,
-[class^="titleWrapper"] > h2,
-[id^=":r"] > h1,
-[class^="resultChannel"],
-[class^="channelNameContainer_"],
-[class^="searchAnswer_"],
-[class^="autocompleteRowContent_"] [class*="autocompleteRowHeading_"],
-.channelWithIcon,
-[class^="emptyChannelIcon_"] + h3,
-[class^="emptyChannelIcon_"] ~ [class*="description_"],
-[class^="browser_"] [class*="channelText_"],
-[class^="returnButton_"] [class^="text-"],
-[class^="placeholder"][class*="slateTextArea"],
-[class^="auditLog_"] [class^="overflowEllipsis_"] strong,
-.vc-permviewer-perms-title,
-[class^="headerChannelContainer_"] > div,
-[class^="uploadDropModal_"] strong,
-[class^="channelNameSpan_"],
-[class^="quickswitcher_"] [class^="name_"],
-input[name="channel-name"],
-[class^="eyebrow"],
-[class*="name"] {
-  font-family: "Twemoji Mozilla", "Dashless", var(--font-primary);
-} */
-
 [class^="emptyChannelIcon_"] ~ [class*="description_"] > * {
   font-family: var(--font-primary);
 }
-
-:root {
-  --settingswidth: 1100;
-  --settingsheight: 80;
-  --settingsbackground: transparent;
-}
-
 #app-mount .layer_f7d46a ~ .layer_f7d46a {
   border-radius: var(--radius-md) !important;
   box-shadow: var(--shadow-high) !important;
 }
-
 .vc-platform-indicator,
 [class^="nitroBadgeSvg_"] {
   height: 1rem;
 }
-
 [class^="roleIcon_"] {
   margin-left: 1ch;
 }
-
-/*decor go away on hover*/
-[class^="avatar_"]:hover + [class^="avatarDecoration_"],
-[class^="avatar_"]:hover [class^="avatarDecoration_"] {
+[class*="userProfileOuterThemed_"]
+  [class*="clickable_"]
+  svg
+  > :not([fill*="#"]):not(foreignObject),
+[class^="avatar_"]:hover [class^="avatarDecoration_"],
+[class^="avatar_"]:hover + [class^="avatarDecoration_"] {
   opacity: 0 !important;
 }
-
 [class^="avatarDecoration_"] {
-  transition: 0.3s opacity;
+  transition: opacity 0.3s;
 }
-
 [class*="lineClamp2Plus_"] {
   overflow-y: auto !important;
 }
-
 [class^="overlayAvatar_"] {
   --xhairwidth: 2px;
   box-shadow: none;
   border-width: 2px;
-
-  &::before {
-    content: "";
-    background-color: oklch(0 0 0 /0.001);
-    position: absolute;
-    backdrop-filter: invert(1);
-    width: var(--xhairwidth);
-    height: 100%;
-    left: calc(50% - (var(--xhairwidth) / 2));
-  }
-
-  &::after {
-    content: "";
-    background-color: oklch(0 0 0 /0.001);
-    position: absolute;
-    backdrop-filter: invert(1);
-    width: 100%;
-    height: var(--xhairwidth);
-    top: calc(50% - (var(--xhairwidth) / 2));
-  }
 }
-
-/* #account-status-picker--online {
-  --brand-experiment-560: var(--green-360);
-}
-#account-status-picker--dnd {
-  --brand-experiment-560: var(--red-400);
-}
-#account-status-picker--idle {
-  --brand-experiment-560: var(--yellow-330);
-}
-#account-status-picker--invisible {
-  --brand-experiment-560: var(--primary-400);
-}
-#account .submenu_aed9ee .separator__174fc {
-  display: none;
-}
-#account .submenu_aed9ee .description_d1e167 {
-  height: fit-content;
-  overflow: hidden;
-  max-height: 0rem;
-  transition: 0.2s ease !important;
-  width: 100%;
-  flex: 0 0 100%;
-  display: flex;
-}
-#account .submenu_aed9ee .item__183e8.focused_dcafb9 .description_d1e167 {
-  max-height: 4rem;
-}
-.statusItem__24445 {
-  display: flex;
-  flex-wrap: wrap;
-}
-.statusItem__24445 .icon__1d1c6 {
-  margin-right: 10px;
-  flex: 0 0 10px;
-}
-.status__8c19b {
-  width: calc(100% - 20px);
-  display: flex;
-}
-
-#account-status-picker--idle.focused_dcafb9 .statusItem__24445::after {
-  max-height: 4rem;
-}
- */
 div[class^="topicsScroller_"] {
   max-height: calc(100vh - 2.5in);
 }
 :has(> div[class^="topicsScroller_"]) {
   width: calc(100% - 8Q);
 }
-
 [class*="channelTextAreaDisabled"] {
   display: none !important;
-}
-
-/* or if it doesn't work like because of themes: */
-[class*="channelTextAreaDisabled"] {
   opacity: 0 !important;
   position: absolute !important;
-  height: 0px !important;
-  width: 0px !important;
+  height: 0 !important;
+  width: 0 !important;
   z-index: 0 !important;
 }
-
 [class*="botText"] {
   font-weight: 500;
 }
-
 [class*="userPanelInner"] [class*="nickname"] {
   font-family: var(--font-display);
 }
-
 :root:has(
     #thread-context,
     #channel-context,
@@ -723,39 +449,35 @@ div[class^="topicsScroller_"] {
     #user-settings-cog,
     #account
   ),
-:root:has([class^="privateChannels_"]):has(#user-context),
 :root:has(
     :is([class^="sidebar_"], [class*="guilds_"]):is(:hover, :focus-within)
-  ) {
+  ),
+:root:has([class^="privateChannels_"]):has(#user-context) {
   --visiblechannellist-width: 280px;
 }
-
 .sidebar_a4d4d9 {
   width: var(--visiblechannellist-width, 0);
-  transition: width 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 .sidebar_a4d4d9 .container_ee69e0 {
   width: 280px;
 }
-
-[class*="accountProfilePopoutWrapper"]
-  [class*="biteSizeInner"]
-  > [class*="header"],
-[class*="accountProfilePopoutWrapper"]
-  [class*="biteSizeInner"]
-  > [class*="body"]
-  > div:not([class*="menus"]),
 [class*="accountProfilePopoutWrapper"]
   [class*="biteSizeInner"]
   > [clas*="wrapper"]
   > div,
 [class*="accountProfilePopoutWrapper"]
   [class*="biteSizeInner"]
+  > [class*="body"]
+  > div:not([class*="menus"]),
+[class*="accountProfilePopoutWrapper"]
+  [class*="biteSizeInner"]
+  > [class*="header"],
+[class*="accountProfilePopoutWrapper"]
+  [class*="biteSizeInner"]
   > [class*="wrapper"] {
   display: none !important;
 }
-
 [class*="accountProfilePopoutWrapper"] [class*="biteSizeInner"],
 [class*="accountProfilePopoutWrapper"]
   [class*="biteSizeInner"]
@@ -764,37 +486,22 @@ div[class^="topicsScroller_"] {
   padding: 0 !important;
   border: 0 !important;
 }
-
 [class*="accountProfilePopoutWrapper"]
   [class*="biteSizeInner"]
   > [class*="body"] {
   padding: 16px !important;
 }
-
-/* source: https://github.com/rinyafii/theme-stuff/discord/snippets */
-
-/*main (expanded) profile --------- */
-[class*="userProfileModalInner_"]:before {
-  display: none;
-}
 [class*="fullSizeOverlayBackground_"] {
   background: rgb(var(--bg-overlay-color) / 0.6) !important;
 }
-
-/*mini profile --------- */
 [class*="userProfileOuterThemed_"] {
   padding: 0 !important;
-} /* remove ugly outer border */
-[class*="userProfileOuterThemed_"] [class*="userPopoutInner_"]:before {
-  display: none;
-} /* remove default background tint */
+}
 [class*="userProfileOuterThemed_"]
   [class*="body_"]:not([class*="bodyNormal"])
   > [class*="container_"] {
   margin-bottom: 8px;
-} /* add margin below username */
-
-/* invent a new bg tint */
+}
 [class*="userProfileOuterThemed_"]
   [class*="body_"]:not([class*="bodyNormal"])
   > [class*="container_"]:after {
@@ -811,40 +518,33 @@ div[class^="topicsScroller_"] {
   background: rgb(var(--bg-overlay-color) / 0.6);
   border: var(--profile-body-border-color) 0.8px solid;
 }
-
-/* fix colors on role pills */
+[class*="userProfileOuterThemed_"]
+  [class*="footer_"]
+  [class*="themedBackground_"],
 [class*="userProfileOuterThemed_"] [class*="pill__"] {
   background: rgb(var(--bg-overlay-color) / 0.4) !important;
 }
-
-/* make the 'add role' button visually different (and also make it a perfect circle) */
 [class*="userProfileOuter"] .button__6d63b {
   background: rgb(var(--bg-overlay-color) / 0.2);
   border-radius: 50%;
   aspect-ratio: 1;
 }
 [class*="userProfileOuterUnthemed_"] .button__6d63b {
-  background: var(--primary-760); /*i hate discords css color system so much*/
+  background: var(--primary-760);
 }
-
-/* text shadow on username/pronouns area because some themes could make it hard to read */
+[class*="userProfileOuter"] div[class*="pronouns_"],
 [class*="userProfileOuter"] h1,
-[class*="userProfileOuter"] span[class*="userTagUsername_"],
-[class*="userProfileOuter"] div[class*="pronouns_"] {
+[class*="userProfileOuter"] span[class*="userTagUsername_"] {
   text-shadow: rgb(var(--bg-overlay-color) / 0.3) 1px 0 px;
 }
-
-/* section dividers */
 [class*="userPopoutInner_"][class*="biteSizeInnerThemed_"]
   > [class*="body_"]
   > div:not([class*="container_"]):not([class*="container_"] + div) {
-  background: transparent !important;
-  padding: 0;
-  padding-top: 0.75rem;
+  background: 0 0 !important;
+  padding: 0.75rem 0 0;
   border-top: rgb(var(--bg-overlay-color-inverse) / 0.1) 1px solid;
   border-radius: 0;
 }
-/* special for non-nitro themes */
 [class*="userProfileOuterUnthemed_"]
   [class*="userPopoutInner_"][class*="biteSizeInnerThemed_"]
   > [class*="body_"]
@@ -853,15 +553,6 @@ div[class^="topicsScroller_"] {
   ) {
   border-top: var(--bg-mod-faint) 1px solid;
 }
-
-/* footer message thingy*/
-[class*="userProfileOuterThemed_"]
-  [class*="footer_"]
-  [class*="themedBackground_"] {
-  background: rgb(var(--bg-overlay-color) / 0.4) !important;
-}
-
-/* fix colors on badge container */
 [class*="userProfileOuterThemed_"]
   [class*="userPopoutInner_"]
   [class*="container__"] {
@@ -870,52 +561,38 @@ div[class^="topicsScroller_"] {
 }
 [class*="descriptionClamp_"] {
   -webkit-line-clamp: 10;
-} /* make bio cut off a more sane number */
-
-/* fix user status icon bg color */
-[class*="userProfileOuterThemed_"]
-  [class*="clickable_"]
-  svg
-  > :not([fill*="#"]):not(foreignObject) {
-  opacity: 0 !important;
 }
-
-/*slimmer status bubble*/
 [class*="statusBubbleWithTextPadding_"] {
   padding: 5px 10px;
 }
-
 [class*="accountProfilePopoutWrapper"] [class*="biteSizeOuter"] {
   background-image: none;
   background-color: var(--background-secondary-alt) !important;
 }
-
 [class*="userPopoutInner"],
 [class*="userPopoutOuter"] {
   border-radius: var(--radius-lg);
 }
-
 [class*="biteSizeInnerThemed_"] {
   padding-bottom: 0;
 }
-
-.panelSubtextContainer_b2ca13, /* Hide status/username viewer near mic button */
-.newMemberBadge_ed263a, /* No "New member" badge */
-div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]), /* Hide 'Explore Discoverable Servers' in server page */
-.text_e40c16, /* Remove loading quote */
-.threadSuggestionBar_b11c5e, /* Hide thread suggestion in reply */
-div.themed_a0.item_a0.item_c2739c:nth-of-type(6), /* No blocked section in friends list */
-.nowPlayingColumn_c2739c, /* No "Actie now" tab */
-button[aria-label="Open GIF picker"], /* Hide GIF picker button */
-button[aria-label="Open sticker picker"], /* Hide sticker picker button */
-[class^=bar__]:has([class^=voiceChannelsIcon__]), /* Hide "x in vc" scroll indicator */
-[aria-label="Help"], /* Removes "Support" question mark button */
-[aria-label="Start Video Call"], /* remove video call button */
-[aria-label="Show User Profile"], /* Remove Show User Profile button */
-[aria-label="Add Friends to DM"], /* Remove Add Friends to DM button */
-[aria-label="Threads"], /* Remove Threads button in topbar */
-[aria-label="Notification Settings"], /* Remove Notification Settings button in topbar */
-.divider_d2b491.divider_ae36e5, /* Remove dividing line in profile */
-[class^="iconGroup"]:has([class^="hangStatusIcon"]) /* Hide hang statuses */ {
+.divider_d2b491.divider_ae36e5,
+.newMemberBadge_ed263a,
+.nowPlayingColumn_c2739c,
+.panelSubtextContainer_b2ca13,
+.text_e40c16,
+.threadSuggestionBar_b11c5e,
+[aria-label="Add Friends to DM"],
+[aria-label="Notification Settings"],
+[aria-label="Show User Profile"],
+[aria-label="Start Video Call"],
+[aria-label="Help"],
+[aria-label="Threads"],
+[class^="bar__"]:has([class^="voiceChannelsIcon__"]),
+[class^="iconGroup"]:has([class^="hangStatusIcon"]),
+button[aria-label="Open GIF picker"],
+button[aria-label="Open sticker picker"],
+div.themed_a0.item_a0.item_c2739c:nth-of-type(6),
+div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
   display: none !important;
 }
