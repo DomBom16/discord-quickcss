@@ -28,10 +28,8 @@
   background-repeat: no-repeat;
   border-radius: 0;
   position: absolute;
-  /* Adjust the width or height for the emoji */
-  width: 32px;
-  height: 32px;
-  /* end */
+  width: 24px;
+  height: 24px;
   display: block;
   visibility: visible;
   filter: grayscale(100%);
