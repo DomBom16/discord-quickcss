@@ -1,4 +1,7 @@
-# discord-quickcss
+# **discord-quickcss**
+
+- [**discord-quickcss**](#discord-quickcss)
+  - [Installation](#installation)
 
 Discord-QuickCSS is a complilation of CSS snippets I've gathered to make my personal theme. If you find certain aspects of it interesting, give it a whirl, or fork it and only keep what you need.
 
