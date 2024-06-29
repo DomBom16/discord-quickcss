@@ -13,8 +13,14 @@
 @import url(https://aushevahmad.github.io/awesome-css/modules/bartender.css);
 @import url(https://github.com/rinyafii/theme-stuff/raw/main/discord/snippets/search-icon-until-focus.css);
 @import url(https://aushevahmad.github.io/awesome-css/modules/adblock.css);
+@import url(https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css);
 
+/* Config */
 :root {
+  --blur-popup: 40px;
+  --opacity-popup: 0.6;
+  --radius-popup: 40px;
+  --radius-context: 20px;
   --image-link: url("https://cdn.discordapp.com/emojis/1026533070955872337.webp?size=96&quality=lossless");
   --bartender-width: 4ch;
   --prompt-text: "Don't be stupid :3";
