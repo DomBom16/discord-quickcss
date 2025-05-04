@@ -1,0 +1,733 @@
+@import url(https://dablulite.github.io/css-snippets/BetterAuthApps/import.css);
+@import url(https://dablulite.github.io/css-snippets/BetterTitlebar/import.css);
+@import url(https://dablulite.github.io/css-snippets/CyanUI2-Ports/Bootup/import.css);
+@import url(https://dablulite.github.io/css-snippets/PrettyFolderIcons/import.css);
+@import url(https://aushevahmad.github.io/awesome-css/modules/custom-bar-prompt.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css);
+@import url(https://minidiscordthemes.github.io/Snippets/ForumImprovements/main.css);
+@import url(https://minidiscordthemes.github.io/MinimalAddonCards/MinimalAddonCards.theme.css);
+@import url(https://aushevahmad.github.io/awesome-css/modules/adblock.css);
+@import url(https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css);
+@import url(https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/RecolorAddFriendsTab.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
+@import url("https://raw.githubusercontent.com/BurningStoneDiscord/DiscordHighlightGradient/refs/heads/main/MentionReplyingFancyGradient.css");
+
+.mentioned__5126c::after {
+    opacity: 1;
+    background-image: linear-gradient(
+        to right,
+        var(--background-mentioned),
+        var(--background-base-lower)
+    );
+}
+
+.replying__5126c::after {
+    opacity: 1;
+    background-image: linear-gradient(
+        to right,
+        var(--background-message-highlight),
+        var(--background-base-lower)
+    );
+}
+
+/* Config */
+:root {
+    --image-link: url("https://cdn.discordapp.com/emojis/1026533070955872337.webp?size=96&quality=lossless");
+    --bartender-width: 4ch;
+    --prompt-text: "Don't be stupid :3";
+    --user-status-online: #a3be8c;
+    --user-status-idle: #ebcb8b;
+    --user-status-dnd: #bf616a;
+    --user-status-invisible: #7a859d;
+    --font-primary: "Overused Grotesk";
+    /* --font-primary: 'Wingdings'; */
+    --font-display: "Bricolage Grotesque";
+    --font-headline: "Bricolage Grotesque";
+    --font-code: "JetBrains Mono";
+    --channels-filter: blur(0) brightness(100%);
+    --header-opacity: 1;
+    --settingswidth: 1100;
+    --settingsheight: 80;
+    --settingsbackground: transparent;
+}
+
+[aria-label="Select emoji"]::before {
+    content: "";
+    background-image: var(--image-link);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: block;
+    visibility: visible;
+    filter: grayscale(100%);
+    translate: 4px 4px;
+}
+
+[aria-label="Select emoji"]:hover::before {
+    filter: grayscale(0);
+}
+
+[aria-label="Select emoji"] {
+    visibility: hidden;
+}
+
+[class*="iconGroup"]:has(
+        [class*="hangStatusIcon"],
+        [d*="M13 3a1"],
+        [class*="gameIcon"]
+    ) {
+    display: flex;
+    position: absolute;
+    right: 101%;
+}
+
+[class="toolbar_e44302"]::before {
+    font-family: "gg sans";
+}
+
+@keyframes warningVisibility {
+    to {
+        visibility: hidden !important;
+    }
+}
+
+.search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a {
+    width: 22px;
+    background: 0 0;
+}
+
+.searchBarComponent__8f95f {
+    background: 0 0;
+}
+
+.search_ac353c:not(.open_d3ab4e) .iconLayout__9d9a4 {
+    cursor: pointer;
+}
+
+.search_ac353c:not(.open_d3ab4e) .iconContainer__9f124 {
+    transform: scale(1.4);
+}
+
+.search_ac353c:not(.open_d3ab4e) .icon__5c8c7,
+.vc-spotify-album,
+.vc-spotify-artist {
+    color: var(--interactive-normal);
+}
+
+#vc-spotify-player .colorStandard__3d599,
+.search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7,
+.vc-spotify-button {
+    color: var(--interactive-active);
+}
+
+img[role="presentation"] {
+    content: url("https://cdn.discordapp.com/emojis/1161713157794963536.webp?size=128&quality=lossless") !important;
+    transform: rotate(0) !important;
+}
+
+[class^="clickableSticker_"]
+    [class^="assetWrapper_"]:has([class^="lottieCanvas_"]) {
+    width: 48px !important;
+    height: 48px !important;
+}
+
+/* Base styles for the Spotify player */
+#vc-spotify-player {
+    height: 50px;
+    background: none !important;
+    position: relative;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0.375rem 0.5rem;
+    transition: 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#vc-spotify-info-wrapper {
+    width: 100%;
+    transition: 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#vc-spotify-player:hover {
+    height: 256px;
+    padding: 20px !important;
+}
+
+#vc-spotify-player:hover #vc-spotify-info-wrapper {
+    margin-bottom: 16px;
+}
+
+/* Progress bar and button row */
+#vc-spotify-progress-bar,
+.vc-spotify-button-row {
+    opacity: 0;
+    transform: scale(0);
+    display: flex !important;
+    width: 100%;
+    height: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: 500ms cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+#vc-spotify-player:hover #vc-spotify-progress-bar,
+#vc-spotify-player:hover .vc-spotify-button-row {
+    opacity: 1;
+    transform: scale(1);
+    display: flex !important;
+    margin: 16px 4px;
+    width: 100%;
+    height: 24px;
+}
+
+#vc-spotify-player:hover #vc-spotify-progress-bar {
+    margin-bottom: 12px !important;
+}
+
+/* Background image overlay */
+#vc-spotify-player::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background: var(--vc-spotify-track-image) center/cover;
+    opacity: 0;
+    transform: scale(1);
+    transition: 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#vc-spotify-player:has(#vc-spotify-song-title:hover)
+    *:not(:has(#vc-spotify-song-title), #vc-spotify-song-title) {
+    opacity: 0;
+}
+
+#vc-spotify-song-title:hover {
+    animation: fadeout 1500ms ease-in forwards;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* #vc-spotify-player:has(#vc-spotify-song-title:hover)::before {
+  filter: none;
+  border: 1px solid #ffffff33;
+}
+
+#vc-spotify-player:hover::before {
+  opacity: 1;
+  margin: 6px;
+  margin-bottom: 0;
+  height: calc(100% - 8px);
+  width: calc(100% - 14px);
+  border: 1px solid #fff8;
+  border-radius: 4px;
+  filter: brightness(40%);
+} */
+
+/* Album image animations */
+#vc-spotify-player #vc-spotify-album-image {
+    opacity: 1;
+    transform: scale(1);
+    animation: 500ms cubic-bezier(0.165, 0.84, 0.44, 1) blurfade-r;
+    pointer-events: none;
+}
+
+#vc-spotify-player:hover #vc-spotify-album-image {
+    opacity: 1;
+    transform: scale(1.5) translateX(7px) translateY(-100%);
+    animation: 500ms cubic-bezier(0.165, 0.84, 0.44, 1) blurfade;
+}
+
+#vc-spotify-info-wrapper > img {
+    height: 100%;
+    opacity: 1;
+    transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Keyframe animations */
+@keyframes blurfade {
+    0% {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+    20% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(0);
+    }
+    20.00001% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(0) translateX(7px) translateY(calc(-100% - 8px));
+    }
+}
+
+@keyframes blurfade-r {
+    0% {
+        opacity: 1;
+        transform: scale(1.5) translateX(7px) translateY(calc(-100% - 8px));
+        filter: blur(0);
+    }
+    20% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(1) translateX(7px) translateY(calc(-100% - 8px));
+    }
+    20.00001% {
+        opacity: 1;
+        filter: blur(20px);
+        transform: scale(0);
+    }
+}
+
+/* Titles and text */
+#vc-spotify-info-wrapper #vc-spotify-titles {
+    margin-left: 0;
+    transition: margin-left 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#vc-spotify-player:hover #vc-spotify-titles {
+    margin-left: -57px;
+    padding: 0;
+}
+
+#vc-spotify-player #vc-spotify-titles * {
+    transition: 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#vc-spotify-player:hover #vc-spotify-song-title {
+    font-size: 16px !important;
+    padding: 2px 0;
+    width: fit-content;
+}
+
+/* Progress bar adjustments */
+#vc-spotify-player [class^="bar"] [class^="barFill"] {
+    background-color: #7a859d;
+}
+
+#vc-spotify-player [class^="barFill"],
+#vc-spotify-song-title::before,
+#vc-spotify-song-title + div::before,
+#vc-spotify-song-title + div + div::before {
+    background-color: var(--interactive-active);
+}
+
+#vc-spotify-player [class^="bar"] {
+    background-color: color-mix(in srgb, var(--white-500), transparent 75%);
+}
+
+/* #vc-spotify-progress-bar > [class^='slider'] [class^='grabber'] {
+  background-color: var(--interactive-active);
+  width: 4px !important;
+  height: 4px !important;
+  margin-top: 3px;
+  opacity: 1 !important;
+  /* transform: translateY(-9px); Only apply if using Visual Refresh
+} */
+
+.vc-spotify-progress-time {
+    top: 12px;
+}
+
+/* Button styles */
+.vc-spotify-button:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--interactive-active),
+        transparent 75%
+    );
+}
+
+.vc-spotify-button.vc-spotify-shuffle-on {
+    color: var(--green-360);
+}
+
+.vc-spotify-button.vc-spotify-shuffle-on:hover {
+    background-color: color-mix(in srgb, var(--green-360), transparent 75%);
+}
+
+/* Hide shuffle and repeat buttons */
+/* Optional, for a cleaner UI */
+#vc-spotify-player button:has(svg.vc-spotify-shuffle, svg.vc-spotify-repeat) {
+    /* display: none; */
+}
+
+em .emoji {
+    transform: skew(-14deg);
+}
+
+[aria-label="Deafen"] [aria-hidden="true"],
+[aria-label="Mute"] [aria-hidden="true"] {
+    opacity: 0.4;
+}
+
+[class^="positionContainer_"] {
+    height: calc(100vh - 180px);
+}
+
+[data-list-id="guildsnav"] > [class^="scroller_"] > [aria-label],
+[id^="folder-items-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+[data-list-id="guildsnav"]
+    > [class^="scroller_"]
+    > [aria-label]
+    :is([class^="listItem_"], [class^="wrapper_"]):has(
+        [class^="numberBadge_"]
+    ) {
+    order: -1;
+}
+
+[class*="userProfileModalInner_"]:before,
+[class*="userProfileOuterThemed_"] [class*="userPopoutInner_"]:before,
+[class^="botTagCompact_"],
+[class^="container_"]::after,
+[class^="guildSeparator_"],
+[class^="sectionDivider_"],
+[class^="titleWrapper_"] + [class^="divider_"] {
+    display: none;
+}
+
+[class^="itemCard_"],
+[class^="nowPlayingColumn_"] [class^="scroller_"],
+[class^="peopleListItem_"] {
+    border: none;
+}
+
+[class^="emptyChannelIcon_"] ~ [class*="description_"] > * {
+    font-family: var(--font-primary);
+}
+
+#app-mount .layer_f7d46a ~ .layer_f7d46a {
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-high) !important;
+}
+
+.vc-platform-indicator,
+[class^="nitroBadgeSvg_"] {
+    height: 1rem;
+}
+
+[class^="roleIcon_"] {
+    margin-left: 1ch;
+}
+
+[class*="userProfileOuterThemed_"]
+    [class*="clickable_"]
+    svg
+    > :not([fill*="#"]):not(foreignObject),
+[class^="avatar_"]:hover [class^="avatarDecoration_"],
+[class^="avatar_"]:hover + [class^="avatarDecoration_"] {
+    opacity: 0 !important;
+}
+
+[class^="avatarDecoration_"] {
+    transition: opacity 0.3s;
+}
+
+[class*="lineClamp2Plus_"] {
+    overflow-y: auto !important;
+}
+
+[class^="overlayAvatar_"] {
+    --xhairwidth: 2px;
+    box-shadow: none;
+    border-width: 2px;
+}
+
+div[class^="topicsScroller_"] {
+    max-height: calc(100vh - 2.5in);
+}
+
+:has(> div[class^="topicsScroller_"]) {
+    width: calc(100% - 8Q);
+}
+
+[class*="channelTextAreaDisabled"] {
+    display: none !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    height: 0 !important;
+    width: 0 !important;
+    z-index: 0 !important;
+}
+
+[class*="botText"] {
+    font-weight: 500;
+}
+
+[class*="userPanelInner"] [class*="nickname"] {
+    font-family: var(--font-display);
+}
+
+/* :root:has(
+    #thread-context,
+    #channel-context,
+    #guild-context,
+    #guild-browse-channels-context-menu,
+    #audio-device-context,
+    #user-settings-cog,
+    #account
+  ),
+:root:has(:is([class^='sidebar_'], [class*='guilds_']):is(:hover, :focus-within)),
+:root:has([class^='privateChannels_']):has(#user-context) {
+  --visiblechannellist-width: 280px;
+} */
+
+.nowPlayingColumn_c2739c,
+.panelSubtextContainer_b2ca13,
+.text_e40c16,
+.threadSuggestionBar_b11c5e,
+[aria-label="Add Friends to DM"],
+[aria-label="Notification Settings"],
+[aria-label="Show User Profile"],
+[aria-label="Start Video Call"],
+[aria-label="Help"],
+[aria-label="Threads"],
+[class^="bar__"]:has([class^="voiceChannelsIcon__"]),
+[class^="iconGroup"]:has([class^="hangStatusIcon"]),
+button[aria-label="Open GIF picker"],
+button[aria-label="Open sticker picker"],
+button[aria-label="Send a gift"],
+div.themed_a0.item_a0.item_c2739c:nth-of-type(6),
+div[class*="listItem"]:has(div[aria-label="Explore Discoverable Servers"]) {
+    display: none !important;
+}
+
+.formWithLoadedChatInput_a7d72e :before {
+    top: unset;
+    left: unset;
+    right: unset;
+}
+
+.vc-ranb-button {
+    margin: 0 16px;
+    width: calc(100% - 32px);
+    height: 40px !important;
+    min-height: 40px;
+    max-height: 40px !important;
+    padding: 2px;
+    background-color: var(--background-surface-higher);
+    border: none;
+    border-radius: 12px;
+
+    .contents__201d5 {
+        font-size: 0px;
+    }
+
+    .contents__201d5::after {
+        content: "asdfg";
+        font-size: 18px;
+        width: 16px;
+        height: 16px;
+        position: relative;
+        color: transparent;
+        top: 2.5px;
+        left: 6px;
+        background-image: url("data:image/svg+xml,%3Csvg%20x%3D%220%22%20y%3D%220%22%20class%3D%22icon__9293f%22%20aria-hidden%3D%22true%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23D8D8DB%22%20d%3D%22M9.7%202.89c.18-.07.32-.24.37-.43a2%202%200%200%201%203.86%200c.05.2.19.36.38.43A7%207%200%200%201%2019%209.5v2.09c0%20.12.05.24.13.33l1.1%201.22a3%203%200%200%201%20.77%202.01v.28c0%20.67-.34%201.29-.95%201.56-1.31.6-4%201.51-8.05%201.51-4.05%200-6.74-.91-8.05-1.5-.61-.28-.95-.9-.95-1.57v-.28a3%203%200%200%201%20.77-2l1.1-1.23a.5.5%200%200%200%20.13-.33V9.5a7%207%200%200%201%204.7-6.61ZM9.18%2019.84A.16.16%200%200%200%209%2020a3%203%200%201%200%206%200c0-.1-.09-.17-.18-.16a24.86%2024.86%200%200%201-5.64%200Z%22%20class%3D%22%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+    }
+
+    &:hover {
+        background-color: var(--brand-500);
+
+        .contents__201d5::after {
+            background-image: url("data:image/svg+xml,%3Csvg%20x%3D%220%22%20y%3D%220%22%20class%3D%22icon__9293f%22%20aria-hidden%3D%22true%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M9.7%202.89c.18-.07.32-.24.37-.43a2%202%200%200%201%203.86%200c.05.2.19.36.38.43A7%207%200%200%201%2019%209.5v2.09c0%20.12.05.24.13.33l1.1%201.22a3%203%200%200%201%20.77%202.01v.28c0%20.67-.34%201.29-.95%201.56-1.31.6-4%201.51-8.05%201.51-4.05%200-6.74-.91-8.05-1.5-.61-.28-.95-.9-.95-1.57v-.28a3%203%200%200%201%20.77-2l1.1-1.23a.5.5%200%200%200%20.13-.33V9.5a7%207%200%200%201%204.7-6.61ZM9.18%2019.84A.16.16%200%200%200%209%2020a3%203%200%201%200%206%200c0-.1-.09-.17-.18-.16a24.86%2024.86%200%200%201-5.64%200Z%22%20class%3D%22%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+        }
+    }
+}
+
+.messagelogger-edited span:has(> time) {
+    display: none;
+}
+
+[class*="base_"] > [class*="content_"] {
+    margin: 0 10px 10px 0;
+
+    [class*="page_"] {
+        border: 1px solid var(--app-border-frame);
+        border-left: none;
+        border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    [class*="sidebar_"] {
+        &::after {
+            display: none;
+        }
+
+        [class*="sidebarList_"] {
+            border-bottom: 1px solid var(--app-border-frame);
+            border-bottom-left-radius: var(--radius-md);
+        }
+    }
+
+    [class*="chat_"] {
+        border-top: none !important;
+    }
+}
+
+.panels_c48ade {
+    /* left: inherit !important; */
+    height: 57px !important;
+    width: 56px !important;
+    border-radius: 30px !important;
+    display: flex !important;
+    flex-direction: column;
+    overflow: hidden;
+    transition-duration: 0.35s;
+    z-index: 50000;
+    pointer-events: all;
+    border: 1px solid var(--border-subtle) !important;
+    &:has(.container_e131a9) {
+        border: 1px solid var(--border-normal);
+    }
+}
+
+.wrapper_e131a9 {
+    height: 0;
+    overflow: hidden;
+}
+
+body:has(.panels_c48ade:not(:hover)) #vc-spotify-player {
+    display: none;
+}
+
+.panels_c48ade:hover {
+    width: 300px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column;
+    border-radius: 15px !important;
+    filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.123));
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    .wrapper_e131a9 {
+        height: auto !important;
+    }
+}
+.sidebar_c48ade {
+    overflow: visible !important;
+}
+.container__2637a {
+    padding-bottom: 0px !important;
+}
+.scroller__99e7c {
+    margin-bottom: 0px !important;
+}
+.bottom__7aaec {
+    bottom: 0px !important;
+}
+
+.visual-refresh [class^="panels_"] [class^="container__"] [class^="buttons__"] {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: left;
+    transition:
+        opacity 0.1s ease-in,
+        transform 0.1s ease-in;
+    will-change: opacity, transform;
+}
+
+.visual-refresh
+    [class^="panels_"]:hover
+    [class^="container__"]
+    [class^="buttons__"] {
+    transform: scale(1);
+
+    opacity: 1;
+}
+
+.visual-refresh .panel__5dec7 {
+    display: none;
+}
+
+.visual-refresh [class^="panels_"]:hover .panel__5dec7 {
+    display: block;
+}
+
+#vc-spotify-player {
+    --blur-amount: 4px;
+    --normal-bg-colour: var(
+        --bg-overlay-floating,
+        var(--background-base-low, var(--background-secondary-alt))
+    );
+
+    position: relative;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--normal-bg-colour) 100%
+    ) !important;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    > * {
+        filter: drop-shadow(0 0 10px var(--normal-bg-colour));
+    }
+}
+#vc-spotify-player:hover {
+    --blur-amount: 0px;
+}
+#vc-spotify-player::before,
+#vc-spotify-player::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-out;
+}
+#vc-spotify-player::before {
+    background: var(--vc-spotify-track-image);
+    background-position: center top;
+    background-size: cover;
+    opacity: 0.5;
+}
+#vc-spotify-player:hover::before {
+    opacity: 0.7;
+}
+#vc-spotify-player::after {
+    backdrop-filter: blur(var(--blur-amount));
+}
+#vc-spotify-progress-bar
+    > [class^="slider_"]
+    > [class^="bar_"]
+    > [class^="barFill_"] {
+    background-color: white !important;
+    background: var(--vc-spotify-track-image);
+    background-size: 1px 100%;
+}
+#vc-spotify-progress-bar
+    > [class^="slider_"]
+    > [class^="bar_"]
+    > [class^="barFill_"]::before {
+    content: "";
+    position: fixed;
+    height: inherit;
+    width: inherit;
+    top: inherit;
+    left: inherit;
+    border-radius: 4px 0 0 4px;
+    backdrop-filter: blur(10px);
+}
