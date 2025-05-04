@@ -75,67 +75,22 @@
     visibility: hidden;
 }
 
-[class*="iconGroup"]:has(
-        [class*="hangStatusIcon"],
-        [d*="M13 3a1"],
-        [class*="gameIcon"]
-    ) {
-    display: flex;
-    position: absolute;
-    right: 101%;
-}
-
-[class="toolbar_e44302"]::before {
-    font-family: "gg sans";
-}
-
 @keyframes warningVisibility {
     to {
         visibility: hidden !important;
     }
 }
 
-.search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a {
-    width: 22px;
-    background: 0 0;
-}
-
-.searchBarComponent__8f95f {
-    background: 0 0;
-}
-
-.search_ac353c:not(.open_d3ab4e) .iconLayout__9d9a4 {
-    cursor: pointer;
-}
-
-.search_ac353c:not(.open_d3ab4e) .iconContainer__9f124 {
-    transform: scale(1.4);
-}
-
-.search_ac353c:not(.open_d3ab4e) .icon__5c8c7,
 .vc-spotify-album,
 .vc-spotify-artist {
     color: var(--interactive-normal);
 }
 
 #vc-spotify-player .colorStandard__3d599,
-.search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7,
 .vc-spotify-button {
     color: var(--interactive-active);
 }
 
-img[role="presentation"] {
-    content: url("https://cdn.discordapp.com/emojis/1161713157794963536.webp?size=128&quality=lossless") !important;
-    transform: rotate(0) !important;
-}
-
-[class^="clickableSticker_"]
-    [class^="assetWrapper_"]:has([class^="lottieCanvas_"]) {
-    width: 48px !important;
-    height: 48px !important;
-}
-
-/* Base styles for the Spotify player */
 #vc-spotify-player {
     height: 50px;
     background: none !important;
@@ -163,7 +118,6 @@ img[role="presentation"] {
     margin-bottom: 16px;
 }
 
-/* Progress bar and button row */
 #vc-spotify-progress-bar,
 .vc-spotify-button-row {
     opacity: 0;
@@ -190,7 +144,6 @@ img[role="presentation"] {
     margin-bottom: 12px !important;
 }
 
-/* Background image overlay */
 #vc-spotify-player::before {
     z-index: -1;
     content: "";
@@ -207,41 +160,6 @@ img[role="presentation"] {
     transition: 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#vc-spotify-player:has(#vc-spotify-song-title:hover)
-    *:not(:has(#vc-spotify-song-title), #vc-spotify-song-title) {
-    opacity: 0;
-}
-
-#vc-spotify-song-title:hover {
-    animation: fadeout 1500ms ease-in forwards;
-}
-
-@keyframes fadeout {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-/* #vc-spotify-player:has(#vc-spotify-song-title:hover)::before {
-  filter: none;
-  border: 1px solid #ffffff33;
-}
-
-#vc-spotify-player:hover::before {
-  opacity: 1;
-  margin: 6px;
-  margin-bottom: 0;
-  height: calc(100% - 8px);
-  width: calc(100% - 14px);
-  border: 1px solid #fff8;
-  border-radius: 4px;
-  filter: brightness(40%);
-} */
-
-/* Album image animations */
 #vc-spotify-player #vc-spotify-album-image {
     opacity: 1;
     transform: scale(1);
@@ -261,7 +179,6 @@ img[role="presentation"] {
     transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Keyframe animations */
 @keyframes blurfade {
     0% {
         opacity: 1;
@@ -298,7 +215,6 @@ img[role="presentation"] {
     }
 }
 
-/* Titles and text */
 #vc-spotify-info-wrapper #vc-spotify-titles {
     margin-left: 0;
     transition: margin-left 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -319,30 +235,9 @@ img[role="presentation"] {
     width: fit-content;
 }
 
-/* Progress bar adjustments */
-#vc-spotify-player [class^="bar"] [class^="barFill"] {
-    background-color: #7a859d;
-}
-
-#vc-spotify-player [class^="barFill"],
-#vc-spotify-song-title::before,
-#vc-spotify-song-title + div::before,
-#vc-spotify-song-title + div + div::before {
-    background-color: var(--interactive-active);
-}
-
 #vc-spotify-player [class^="bar"] {
     background-color: color-mix(in srgb, var(--white-500), transparent 75%);
 }
-
-/* #vc-spotify-progress-bar > [class^='slider'] [class^='grabber'] {
-  background-color: var(--interactive-active);
-  width: 4px !important;
-  height: 4px !important;
-  margin-top: 3px;
-  opacity: 1 !important;
-  /* transform: translateY(-9px); Only apply if using Visual Refresh
-} */
 
 .vc-spotify-progress-time {
     top: 12px;
@@ -365,58 +260,8 @@ img[role="presentation"] {
     background-color: color-mix(in srgb, var(--green-360), transparent 75%);
 }
 
-/* Hide shuffle and repeat buttons */
-/* Optional, for a cleaner UI */
-#vc-spotify-player button:has(svg.vc-spotify-shuffle, svg.vc-spotify-repeat) {
-    /* display: none; */
-}
-
 em .emoji {
     transform: skew(-14deg);
-}
-
-[aria-label="Deafen"] [aria-hidden="true"],
-[aria-label="Mute"] [aria-hidden="true"] {
-    opacity: 0.4;
-}
-
-[class^="positionContainer_"] {
-    height: calc(100vh - 180px);
-}
-
-[data-list-id="guildsnav"] > [class^="scroller_"] > [aria-label],
-[id^="folder-items-"] {
-    display: flex;
-    flex-direction: column;
-}
-
-[data-list-id="guildsnav"]
-    > [class^="scroller_"]
-    > [aria-label]
-    :is([class^="listItem_"], [class^="wrapper_"]):has(
-        [class^="numberBadge_"]
-    ) {
-    order: -1;
-}
-
-[class*="userProfileModalInner_"]:before,
-[class*="userProfileOuterThemed_"] [class*="userPopoutInner_"]:before,
-[class^="botTagCompact_"],
-[class^="container_"]::after,
-[class^="guildSeparator_"],
-[class^="sectionDivider_"],
-[class^="titleWrapper_"] + [class^="divider_"] {
-    display: none;
-}
-
-[class^="itemCard_"],
-[class^="nowPlayingColumn_"] [class^="scroller_"],
-[class^="peopleListItem_"] {
-    border: none;
-}
-
-[class^="emptyChannelIcon_"] ~ [class*="description_"] > * {
-    font-family: var(--font-primary);
 }
 
 #app-mount .layer_f7d46a ~ .layer_f7d46a {
@@ -433,15 +278,6 @@ em .emoji {
     margin-left: 1ch;
 }
 
-[class*="userProfileOuterThemed_"]
-    [class*="clickable_"]
-    svg
-    > :not([fill*="#"]):not(foreignObject),
-[class^="avatar_"]:hover [class^="avatarDecoration_"],
-[class^="avatar_"]:hover + [class^="avatarDecoration_"] {
-    opacity: 0 !important;
-}
-
 [class^="avatarDecoration_"] {
     transition: opacity 0.3s;
 }
@@ -454,14 +290,6 @@ em .emoji {
     --xhairwidth: 2px;
     box-shadow: none;
     border-width: 2px;
-}
-
-div[class^="topicsScroller_"] {
-    max-height: calc(100vh - 2.5in);
-}
-
-:has(> div[class^="topicsScroller_"]) {
-    width: calc(100% - 8Q);
 }
 
 [class*="channelTextAreaDisabled"] {
@@ -480,20 +308,6 @@ div[class^="topicsScroller_"] {
 [class*="userPanelInner"] [class*="nickname"] {
     font-family: var(--font-display);
 }
-
-/* :root:has(
-    #thread-context,
-    #channel-context,
-    #guild-context,
-    #guild-browse-channels-context-menu,
-    #audio-device-context,
-    #user-settings-cog,
-    #account
-  ),
-:root:has(:is([class^='sidebar_'], [class*='guilds_']):is(:hover, :focus-within)),
-:root:has([class^='privateChannels_']):has(#user-context) {
-  --visiblechannellist-width: 280px;
-} */
 
 .nowPlayingColumn_c2739c,
 .panelSubtextContainer_b2ca13,
@@ -653,7 +467,6 @@ body:has(.panels_c48ade:not(:hover)) #vc-spotify-player {
     [class^="container__"]
     [class^="buttons__"] {
     transform: scale(1);
-
     opacity: 1;
 }
 
