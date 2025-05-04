@@ -10,24 +10,27 @@
 @import url(https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css);
 @import url(https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/RecolorAddFriendsTab.css);
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
-@import url("https://raw.githubusercontent.com/BurningStoneDiscord/DiscordHighlightGradient/refs/heads/main/MentionReplyingFancyGradient.css");
 
-.mentioned__5126c::after {
-    opacity: 1;
-    background-image: linear-gradient(
-        to right,
-        var(--background-mentioned),
-        var(--background-base-lower)
+.message__5126c[class*="mentioned"] {
+    background: linear-gradient(
+        to left,
+        transparent,
+        var(--background-mentioned)
     );
 }
-
-.replying__5126c::after {
-    opacity: 1;
-    background-image: linear-gradient(
-        to right,
-        var(--background-message-highlight),
-        var(--background-base-lower)
+.message__5126c[class*="replying"] {
+    background: linear-gradient(
+        to left,
+        transparent,
+        var(--background-message-highlight)
     );
+}
+.message__5126c:hover {
+    background: linear-gradient(
+        to left,
+        transparent,
+        var(--background-message-hover)
+    ) !important;
 }
 
 /* Config */
@@ -40,10 +43,9 @@
     --user-status-dnd: #bf616a;
     --user-status-invisible: #7a859d;
     --font-primary: "Overused Grotesk";
-    /* --font-primary: 'Wingdings'; */
     --font-display: "Bricolage Grotesque";
     --font-headline: "Bricolage Grotesque";
-    --font-code: "JetBrains Mono";
+    --font-code: "Ligalex Mono";
     --channels-filter: blur(0) brightness(100%);
     --header-opacity: 1;
     --settingswidth: 1100;
