@@ -553,3 +553,12 @@ body:has(.panels_c48ade:not(:hover)) #vc-spotify-player {
     border-radius: 4px 0 0 4px;
     backdrop-filter: blur(10px);
 }
+
+[class^="chipletContainerInner_"]:not(:hover) > span {
+    > span {
+        display: none;
+    }
+    > img {
+        margin-right: 0px;
+    }
+}
